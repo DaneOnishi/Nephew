@@ -13,17 +13,10 @@ class ModelSingleton {
     private init() {}
     
     var pointsCounter = 0
-  
-    
+    var questionNumber = Int()
+
     func scoreSum() {
         pointsCounter += 1
-    }
-    
-    
-    struct Question {
-        var Questions: String
-        var Answers: [String]
-        var correctAnswer: Int
     }
     
     
