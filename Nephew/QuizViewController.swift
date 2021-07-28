@@ -18,11 +18,11 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet var buttons: [UIButton]!
-
+    
     var questions = [Question]()
     var questionNumber = Int()
     var correctAnswer = Int()
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class QuizViewController: UIViewController {
                 buttons[i].setTitle(questions[questionNumber].answers[i], for: UIControl.State.normal)
             }
             questions.remove(at: questionNumber)
-    
+            
         } else {
             NSLog("done")
         }
@@ -84,19 +84,4 @@ class QuizViewController: UIViewController {
             NSLog("wrong")
         }
     }
-    
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
