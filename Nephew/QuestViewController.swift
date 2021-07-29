@@ -18,7 +18,7 @@ class QuestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        questImage.image = UIImage(named: Charges.questImage)
+       // questImage.image = UIImage(named: Charges.questImage)
     }
     
     @IBAction func startQuestButtonPressed(_ sender: Any) {

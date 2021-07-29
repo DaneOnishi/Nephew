@@ -26,7 +26,7 @@ class MainMenuViewController: UIViewController {
                        options: .repeat) {
             self.logoLabel.alpha = 0
             self.logoLabel.alpha = 1
-        }
+        } 
     }
     
     @IBAction func pressStartButton(_ sender: Any) {

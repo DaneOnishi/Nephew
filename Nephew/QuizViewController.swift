@@ -28,6 +28,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if questions.count == 0 {
             presentScoreView()
         } else {
@@ -54,7 +55,9 @@ class QuizViewController: UIViewController {
     func setup(questions: [Question]) {
         self.questions = questions
     }
-
+    
+    
+    
     @IBAction func buttonOne(_ sender: Any) {
         if correctAnswer == 0 {
             ModelSingleton.shared.scoreSum()

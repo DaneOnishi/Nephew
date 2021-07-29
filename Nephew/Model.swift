@@ -53,7 +53,6 @@ class ModelSingleton {
         pointsCounter += 1
     }
     
-    
     enum Answer {
         case correct
         case incorrect
