@@ -30,6 +30,10 @@ class MainMenuViewController: UIViewController {
     }
     
     @IBAction func pressStartButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let chooseLevelVC = storyboard.instantiateViewController(identifier: "ChooseLevelViewController") as? ChooseLevelViewController else { return }
+        chooseLevelVC.modalPresentationStyle = .fullScreen
+        self.present(chooseLevelVC, animated: true, completion: nil)
     }
     
     /*

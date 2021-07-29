@@ -28,6 +28,8 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // quiz stops at last array question and doesn't navigates to next screen
+        // still have to find a way to fix
         
         if questions.count == 0 {
             presentScoreView()

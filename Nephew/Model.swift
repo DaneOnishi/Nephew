@@ -59,6 +59,15 @@ class ModelSingleton {
     }
 }
 
+class QuestGiven {
+    internal init(questImage: String, text: String){
+        self.questImage = questImage
+        self.text = text
+   }
+    var questImage: String
+    var text: String
+}
+
 enum Charges {
     case Senior
     case Pleno

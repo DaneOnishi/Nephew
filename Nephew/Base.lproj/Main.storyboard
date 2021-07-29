@@ -101,7 +101,7 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
         <!--Quest View Controller-->
         <scene sceneID="oZ2-WW-b5V">
             <objects>
-                <viewController id="9uL-7x-REV" customClass="QuestViewController" customModule="Nephew" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestViewController" id="9uL-7x-REV" customClass="QuestViewController" customModule="Nephew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ETT-By-yqB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
         <!--Choose Level View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ChooseLevelViewController" customModule="Nephew" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseLevelViewController" id="BYZ-38-t0r" customClass="ChooseLevelViewController" customModule="Nephew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

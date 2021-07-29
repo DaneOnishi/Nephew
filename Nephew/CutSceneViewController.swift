@@ -37,7 +37,7 @@ class CutSceneViewController: UIViewController {
                     self.disclaimerCutScene.alpha = 1
                     self.disclaimerCutScene.alpha = 0
                 } completion: { _ in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         guard let mainMenuVC = storyboard.instantiateViewController(identifier: "MainMenuViewController") as? MainMenuViewController else {
                             return

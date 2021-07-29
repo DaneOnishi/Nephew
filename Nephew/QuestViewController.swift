@@ -13,25 +13,21 @@ class QuestViewController: UIViewController {
     @IBOutlet weak var questImage: UIImageView!
     @IBOutlet weak var startQuestButton: UIButton!
     
-    var questChargeImage = Charges.self
+    var quest: QuestGiven!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //still have to pass image according to the levels (Charges)
 
-       // questImage.image = UIImage(named: Charges.questImage)
+        questImage.image = UIImage(named: quest.questImage)
     }
     
     @IBAction func startQuestButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let quizVC = storyboard.instantiateViewController(identifier: "QuizViewController") as? QuizViewController else { return }
+        quizVC.modalPresentationStyle = .fullScreen
+        self.present(quizVC, animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
