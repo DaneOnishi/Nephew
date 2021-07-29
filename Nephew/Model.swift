@@ -14,6 +14,21 @@ class ModelSingleton {
     
     var pointsCounter = 0
     var questionNumber = Int()
+    
+    let questions = [
+        Charges.EternalNephew:
+            [
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2)
+                
+            ],
+        .Junior:
+            [
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2)
+            ]
+    ]
 
     func scoreSum() {
         pointsCounter += 1
@@ -24,12 +39,12 @@ class ModelSingleton {
         case correct
         case incorrect
     }
-    
-    enum Charges {
-        case Senior
-        case Pleno
-        case Junior
-        case EternalNephew
-    }
+}
+
+enum Charges {
+    case Senior
+    case Pleno
+    case Junior
+    case EternalNephew
 }
 

@@ -27,8 +27,12 @@ class ChooseLevelViewController: UIViewController {
         addPanGesture(view: plenoFloppy)
         addPanGesture(view: seniorFloppy)
         
-        floppyViewOrigin = eternalNephewFloppy.frame.origin
+//        floppyViewOrigin = eternalNephewFloppy.frame.origin
         view.bringSubviewToFront(eternalNephewFloppy)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     func addPanGesture(view: UIView) {
@@ -36,42 +40,54 @@ class ChooseLevelViewController: UIViewController {
         view.addGestureRecognizer(pan)
     }
     
-    func setup(questions: Question) {
-        self.questions = [questions]
-    }
+  
     
-    //    func presentViewOne(question: Question) {
-    //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //        guard let quizVC = storyboard.instantiateViewController(identifier: "QuizViewController") as? QuizViewController else {
-    //            return
-    //        }
-    //        quizVC.modalPresentationStyle = .fullScreen
-    //        quizVC.setup(questions: question)
-    //        present(quizVC, animated: true, completion: nil)
-    //    }
+//        func presentViewOne(question: Question) {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            guard let quizVC = storyboard.instantiateViewController(identifier: "QuizViewController") as? QuizViewController else {
+//                return
+//            }
+//            quizVC.modalPresentationStyle = .fullScreen
+//            quizVC.setup(questions: question)
+//            present(quizVC, animated: true, completion: nil)
+//        }
     
     @objc func handlePan(sender: UIPanGestureRecognizer) {
         let floppyView = sender.view!
         let translation = sender.translation(in: view)
         
         switch sender.state {
-        case .began,.changed:
+        case .began:
+            self.floppyViewOrigin = floppyView.frame.origin
+         case .changed:
             floppyView.center = CGPoint(x: (floppyView.center.x) + translation.x, y: (floppyView.center.y) + translation.y)
             sender.setTranslation(CGPoint.zero, in: view)
         case .ended:
             if floppyView.frame.intersects(computer.frame) {
                 UIView.animate(withDuration: 0.3) {
-                    self.eternalNephewFloppy.alpha = 0.0
-                    //presentViewOne(question: Question)
+                    floppyView.alpha = 0.0
+                } completion: { _ in
+                    let level = Charges.Junior
+                    self.presentQuiz(level: level)
                 }
             } else {
                 UIView.animate(withDuration: 0.3) {
-                    self.eternalNephewFloppy.frame.origin = self.floppyViewOrigin
+                    floppyView.frame.origin = self.floppyViewOrigin
                 }
             }
         default:
             break
         }
+    }
+    
+    func presentQuiz(level: Charges) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let quizVC = storyboard.instantiateViewController(identifier: "QuizViewController") as? QuizViewController else {
+            return
+        }
+        quizVC.modalPresentationStyle = .fullScreen
+        quizVC.setup(questions: ModelSingleton.shared.questions[level]!)
+        self.present(quizVC, animated: true, completion: nil)
     }
     
     /*

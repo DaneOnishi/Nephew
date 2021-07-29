@@ -27,7 +27,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        questions = [Question(questions: "Qual config mana?", answers: ["CMYK", "RGB", "Hexachrome", "Análogo"], correctAnswer: 1), Question(questions: "Quanto de sangria?", answers: ["0,3", "0,5", "1,0", "sem sangria obv"], correctAnswer: 0)]
+//        questions = [Question(questions: "Qual config mana?", answers: ["CMYK", "RGB", "Hexachrome", "Análogo"], correctAnswer: 1), Question(questions: "Quanto de sangria?", answers: ["0,3", "0,5", "1,0", "sem sangria obv"], correctAnswer: 0)]
         
         pickQuestion()
     }
@@ -46,6 +46,10 @@ class QuizViewController: UIViewController {
         } else {
             NSLog("done")
         }
+    }
+    
+    func setup(questions: [Question]) {
+        self.questions = questions
     }
     
     @IBAction func buttonOne(_ sender: Any) {
