@@ -29,7 +29,7 @@ class ModelSingleton {
                 Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
                 Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
                 Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
-                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2)
+                Question(questions: "fome", answers: ["rato", "hamster", "rita", "ratao"], correctAnswer: 2)
             ],
         .Junior:
             [
@@ -65,5 +65,21 @@ enum Charges {
     case Pleno
     case Junior
     case EternalNephew
+    
+    var questImage: String {
+        switch self {
+        case .EternalNephew:
+            return "Quest-One"
+        case .Junior:
+            return "Quest-Two"
+        case .Pleno:
+            return "Quest Three"
+        case .Senior:
+            return "Quest Four"
+        default:
+            return "Quest-Zero"
+        }
+    }
+    
 }
 

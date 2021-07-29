@@ -22,7 +22,7 @@ class MainMenuViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         UIView.animate(withDuration: 0.1,
-                       delay: 1, // tempo que fica tela 1
+                       delay: 1,
                        options: .repeat) {
             self.logoLabel.alpha = 0
             self.logoLabel.alpha = 1

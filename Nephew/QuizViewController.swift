@@ -28,11 +28,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        questions = [Question(questions: "Qual config mana?", answers: ["CMYK", "RGB", "Hexachrome", "Análogo"], correctAnswer: 1), Question(questions: "Quanto de sangria?", answers: ["0,3", "0,5", "1,0", "sem sangria obv"], correctAnswer: 0)]
-        
-
-        
-        if questionNumber == questions.count {
+        if questions.count == 0 {
             presentScoreView()
         } else {
             pickQuestion()
@@ -58,9 +54,7 @@ class QuizViewController: UIViewController {
     func setup(questions: [Question]) {
         self.questions = questions
     }
-    
-    
-    
+
     @IBAction func buttonOne(_ sender: Any) {
         if correctAnswer == 0 {
             ModelSingleton.shared.scoreSum()
@@ -68,9 +62,6 @@ class QuizViewController: UIViewController {
         } else {
             NSLog("wrong")
         }
-        
-        
-        
     }
     
     @IBAction func buttonTwo(_ sender: Any) {
@@ -106,4 +97,6 @@ class QuizViewController: UIViewController {
         scoreVC.modalPresentationStyle = .fullScreen
         self.present(scoreVC, animated: true, completion: nil)
     }
+    
+    
 }
