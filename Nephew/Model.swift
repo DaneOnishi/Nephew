@@ -20,16 +20,35 @@ class ModelSingleton {
             [
                 Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
                 Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
+                Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
                 Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2)
-                
             ],
         .Junior:
             [
                 Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2),
                 Question(questions: "fome", answers: ["burg", "hamster", "enzo", "rinite"], correctAnswer: 2)
+            ],
+        .Pleno:
+            [
+                Question(questions: "Qual o primeiro passo", answers: ["cortar", "abrir", "trazer", "mapear"], correctAnswer: 3),
+                Question(questions: "hm biscoito", answers: ["sim", "nao", "true", "fake"], correctAnswer: 3)
+            ],
+        
+        .Senior:
+            [
+                Question(questions: "Se voce fosse rato", answers: ["cachorro", "rato", "passaro", "mamaco"], correctAnswer: 1)
             ]
+        
     ]
-
+    
     func scoreSum() {
         pointsCounter += 1
     }

@@ -14,6 +14,8 @@ class ChooseLevelViewController: UIViewController {
     @IBOutlet weak var juniorFloppy: UIImageView!
     @IBOutlet weak var eternalNephewFloppy: UIImageView!
     var questions = [Question]()
+    var pointsCounter = ModelSingleton.shared.pointsCounter
+    
     
     @IBOutlet weak var computer: UIImageView!
     
@@ -22,6 +24,7 @@ class ChooseLevelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      
         addPanGesture(view: eternalNephewFloppy)
         addPanGesture(view: juniorFloppy)
         addPanGesture(view: plenoFloppy)
@@ -29,6 +32,25 @@ class ChooseLevelViewController: UIViewController {
         
 //        floppyViewOrigin = eternalNephewFloppy.frame.origin
         view.bringSubviewToFront(eternalNephewFloppy)
+        view .bringSubviewToFront(juniorFloppy)
+        view .bringSubviewToFront(plenoFloppy)
+        view .bringSubviewToFront(seniorFloppy)
+        
+        pointsCounter = 6
+        
+        if pointsCounter == 6 {
+            eternalNephewFloppy.isUserInteractionEnabled = true
+            juniorFloppy.isUserInteractionEnabled = true
+            plenoFloppy.isUserInteractionEnabled = false
+            seniorFloppy.isUserInteractionEnabled = false
+            seniorFloppy.alpha = 0.4
+        } else if pointsCounter == 12 {
+            eternalNephewFloppy.isUserInteractionEnabled = true
+            juniorFloppy.isUserInteractionEnabled = true
+            plenoFloppy.isUserInteractionEnabled = true
+            seniorFloppy.isUserInteractionEnabled = false
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,15 +64,7 @@ class ChooseLevelViewController: UIViewController {
     
   
     
-//        func presentViewOne(question: Question) {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            guard let quizVC = storyboard.instantiateViewController(identifier: "QuizViewController") as? QuizViewController else {
-//                return
-//            }
-//            quizVC.modalPresentationStyle = .fullScreen
-//            quizVC.setup(questions: question)
-//            present(quizVC, animated: true, completion: nil)
-//        }
+
     
     @objc func handlePan(sender: UIPanGestureRecognizer) {
         let floppyView = sender.view!

@@ -22,14 +22,21 @@ class QuizViewController: UIViewController {
     var questions = [Question]()
     var questionNumber = Int()
     var correctAnswer = Int()
+    var pointsCounter = ModelSingleton.shared.pointsCounter
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        questions = [Question(questions: "Qual config mana?", answers: ["CMYK", "RGB", "Hexachrome", "Análogo"], correctAnswer: 1), Question(questions: "Quanto de sangria?", answers: ["0,3", "0,5", "1,0", "sem sangria obv"], correctAnswer: 0)]
+        //        questions = [Question(questions: "Qual config mana?", answers: ["CMYK", "RGB", "Hexachrome", "Análogo"], correctAnswer: 1), Question(questions: "Quanto de sangria?", answers: ["0,3", "0,5", "1,0", "sem sangria obv"], correctAnswer: 0)]
         
-        pickQuestion()
+
+        
+        if questionNumber == questions.count {
+            presentScoreView()
+        } else {
+            pickQuestion()
+        }
     }
     
     func pickQuestion() {
@@ -52,6 +59,8 @@ class QuizViewController: UIViewController {
         self.questions = questions
     }
     
+    
+    
     @IBAction func buttonOne(_ sender: Any) {
         if correctAnswer == 0 {
             ModelSingleton.shared.scoreSum()
@@ -59,6 +68,8 @@ class QuizViewController: UIViewController {
         } else {
             NSLog("wrong")
         }
+        
+        
         
     }
     
@@ -87,5 +98,12 @@ class QuizViewController: UIViewController {
         } else {
             NSLog("wrong")
         }
+    }
+    
+    func presentScoreView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let scoreVC = storyboard.instantiateViewController(identifier: "ScoreViewController") as? ScoreViewController else { return }
+        scoreVC.modalPresentationStyle = .fullScreen
+        self.present(scoreVC, animated: true, completion: nil)
     }
 }

@@ -17,6 +17,7 @@
 		418E740B26B0D42000F039BE /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E740A26B0D42000F039BE /* QuizViewController.swift */; };
 		418E740D26B1ED4300F039BE /* ChooseLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E740C26B1ED4300F039BE /* ChooseLevelViewController.swift */; };
 		418E740F26B23FD500F039BE /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E740E26B23FD500F039BE /* MainMenuViewController.swift */; };
+		418E741126B25C9F00F039BE /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E741026B25C9F00F039BE /* ScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		418E740A26B0D42000F039BE /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		418E740C26B1ED4300F039BE /* ChooseLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLevelViewController.swift; sourceTree = "<group>"; };
 		418E740E26B23FD500F039BE /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		418E741026B25C9F00F039BE /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +69,11 @@
 				418E73F426B07F4400F039BE /* AppDelegate.swift */,
 				418E73F626B07F4400F039BE /* SceneDelegate.swift */,
 				418E73F826B07F4400F039BE /* ViewController.swift */,
-				418E73FA26B07F4400F039BE /* Main.storyboard */,
 				418E740E26B23FD500F039BE /* MainMenuViewController.swift */,
-				418E740A26B0D42000F039BE /* QuizViewController.swift */,
 				418E740C26B1ED4300F039BE /* ChooseLevelViewController.swift */,
+				418E740A26B0D42000F039BE /* QuizViewController.swift */,
+				418E741026B25C9F00F039BE /* ScoreViewController.swift */,
+				418E73FA26B07F4400F039BE /* Main.storyboard */,
 				418E73FD26B07F4600F039BE /* Assets.xcassets */,
 				418E73FF26B07F4600F039BE /* LaunchScreen.storyboard */,
 				418E740226B07F4600F039BE /* Info.plist */,
@@ -156,6 +159,7 @@
 				418E740F26B23FD500F039BE /* MainMenuViewController.swift in Sources */,
 				418E73F726B07F4400F039BE /* SceneDelegate.swift in Sources */,
 				418E740926B083AE00F039BE /* Model.swift in Sources */,
+				418E741126B25C9F00F039BE /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
