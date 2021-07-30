@@ -50,7 +50,7 @@ class QuizViewController: UIViewController {
             questions.remove(at: questionNumber)
             
         } else {
-            NSLog("done")
+            presentScoreView()
         }
     }
     
