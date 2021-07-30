@@ -29,14 +29,12 @@ class ChooseLevelViewController: UIViewController {
         addPanGesture(view: juniorFloppy)
         addPanGesture(view: plenoFloppy)
         addPanGesture(view: seniorFloppy)
-        
-//        floppyViewOrigin = eternalNephewFloppy.frame.origin
+
         view.bringSubviewToFront(eternalNephewFloppy)
         view .bringSubviewToFront(juniorFloppy)
         view .bringSubviewToFront(plenoFloppy)
         view .bringSubviewToFront(seniorFloppy)
         
-        pointsCounter = 2
         
         if pointsCounter == 6 {
             eternalNephewFloppy.isUserInteractionEnabled = true
@@ -65,7 +63,6 @@ class ChooseLevelViewController: UIViewController {
             plenoFloppy.alpha = 0.4
             seniorFloppy.alpha = 0.4
         }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
