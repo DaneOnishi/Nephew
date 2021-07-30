@@ -278,11 +278,20 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD1-zA-bxk">
+                                <rect key="frame" x="182" y="547" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="returnToMainOnPress:" destination="xph-r0-udA" eventType="touchUpInside" id="L2S-6U-gfL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jYj-ac-Tec"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="returnToMainButton" destination="QD1-zA-bxk" id="EMF-I3-AzZ"/>
                         <outlet property="scoreLabel" destination="3Dm-43-gBd" id="g14-az-hwt"/>
                     </connections>
                 </viewController>

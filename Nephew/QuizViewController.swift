@@ -23,13 +23,10 @@ class QuizViewController: UIViewController {
     var questionNumber = Int()
     var correctAnswer = Int()
     var pointsCounter = ModelSingleton.shared.pointsCounter
-    
+    let generator = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // quiz stops at last array question and doesn't navigates to next screen
-        // still have to find a way to fix
         
         if questions.count == 0 {
             presentScoreView()
@@ -62,16 +59,21 @@ class QuizViewController: UIViewController {
         if correctAnswer == 0 {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
+            generator.notificationOccurred(.success)
         } else {
-            pickQuestion()        }
+            pickQuestion()
+            generator.notificationOccurred(.error)
+        }
     }
     
     @IBAction func buttonTwo(_ sender: Any) {
         if correctAnswer == 1 {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
+            generator.notificationOccurred(.success)
         } else {
             pickQuestion()
+            generator.notificationOccurred(.error)
         }
     }
     
@@ -79,8 +81,10 @@ class QuizViewController: UIViewController {
         if correctAnswer == 2 {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
+            generator.notificationOccurred(.success)
         } else {
             pickQuestion()
+            generator.notificationOccurred(.error)
         }
     }
     
@@ -88,8 +92,10 @@ class QuizViewController: UIViewController {
         if correctAnswer == 3 {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
+            generator.notificationOccurred(.success)
         } else {
             pickQuestion()
+            generator.notificationOccurred(.error)
         }
     }
     

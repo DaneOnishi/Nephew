@@ -77,10 +77,7 @@ class ChooseLevelViewController: UIViewController {
         view.addGestureRecognizer(pan)
     }
     
-  
-    
 
-    
     @objc func handlePan(sender: UIPanGestureRecognizer) {
         let floppyView = sender.view!
         let translation = sender.translation(in: view)
