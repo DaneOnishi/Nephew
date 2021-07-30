@@ -36,19 +36,34 @@ class ChooseLevelViewController: UIViewController {
         view .bringSubviewToFront(plenoFloppy)
         view .bringSubviewToFront(seniorFloppy)
         
-        pointsCounter = 6
+        pointsCounter = 2
         
         if pointsCounter == 6 {
             eternalNephewFloppy.isUserInteractionEnabled = true
             juniorFloppy.isUserInteractionEnabled = true
             plenoFloppy.isUserInteractionEnabled = false
             seniorFloppy.isUserInteractionEnabled = false
+            plenoFloppy.alpha = 0.4
             seniorFloppy.alpha = 0.4
-        } else if pointsCounter == 12 {
+        } else if pointsCounter >= 12 {
             eternalNephewFloppy.isUserInteractionEnabled = true
             juniorFloppy.isUserInteractionEnabled = true
             plenoFloppy.isUserInteractionEnabled = true
             seniorFloppy.isUserInteractionEnabled = false
+            seniorFloppy.alpha = 0.4
+        } else if pointsCounter >= 18 {
+            eternalNephewFloppy.isUserInteractionEnabled = true
+            juniorFloppy.isUserInteractionEnabled = true
+            plenoFloppy.isUserInteractionEnabled = true
+            seniorFloppy.isUserInteractionEnabled = true
+        } else if pointsCounter < 6 {
+            eternalNephewFloppy.isUserInteractionEnabled = true
+            juniorFloppy.isUserInteractionEnabled = false
+            plenoFloppy.isUserInteractionEnabled = false
+            seniorFloppy.isUserInteractionEnabled = false
+            juniorFloppy.alpha = 0.4
+            plenoFloppy.alpha = 0.4
+            seniorFloppy.alpha = 0.4
         }
         
     }
@@ -81,7 +96,14 @@ class ChooseLevelViewController: UIViewController {
                 UIView.animate(withDuration: 0.3) {
                     floppyView.alpha = 0.0
                 } completion: { _ in
-                    let level = Charges.Junior
+                    var level = Charges.EternalNephew
+                    if self.pointsCounter >= 6{
+                        level = Charges.Junior
+                    } else if self.pointsCounter >= 12 {
+                        level = Charges.Pleno
+                    } else if self.pointsCounter >= 18 {
+                        level = Charges.Senior
+                    }
                     self.presentQuiz(level: level)
                 }
             } else {

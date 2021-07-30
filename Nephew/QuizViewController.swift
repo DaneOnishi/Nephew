@@ -58,15 +58,12 @@ class QuizViewController: UIViewController {
         self.questions = questions
     }
     
-    
-    
     @IBAction func buttonOne(_ sender: Any) {
         if correctAnswer == 0 {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
         } else {
-            NSLog("wrong")
-        }
+            pickQuestion()        }
     }
     
     @IBAction func buttonTwo(_ sender: Any) {
@@ -74,7 +71,7 @@ class QuizViewController: UIViewController {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
         } else {
-            NSLog("wrong")
+            pickQuestion()
         }
     }
     
@@ -83,7 +80,7 @@ class QuizViewController: UIViewController {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
         } else {
-            NSLog("wrong")
+            pickQuestion()
         }
     }
     
@@ -92,7 +89,7 @@ class QuizViewController: UIViewController {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
         } else {
-            NSLog("wrong")
+            pickQuestion()
         }
     }
     
@@ -102,6 +99,4 @@ class QuizViewController: UIViewController {
         scoreVC.modalPresentationStyle = .fullScreen
         self.present(scoreVC, animated: true, completion: nil)
     }
-    
-    
 }

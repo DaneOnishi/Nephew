@@ -18,9 +18,7 @@ class QuestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //still have to pass image according to the levels (Charges)
-
         questImage.image = UIImage(named: quest.questImage)
     }
     
