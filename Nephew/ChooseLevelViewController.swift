@@ -24,7 +24,6 @@ class ChooseLevelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
         addPanGesture(view: eternalNephewFloppy)
         addPanGesture(view: juniorFloppy)
         addPanGesture(view: plenoFloppy)
@@ -35,8 +34,7 @@ class ChooseLevelViewController: UIViewController {
         view .bringSubviewToFront(plenoFloppy)
         view .bringSubviewToFront(seniorFloppy)
         
-        
-        if pointsCounter == 6 {
+        if pointsCounter >= 6 {
             eternalNephewFloppy.isUserInteractionEnabled = true
             juniorFloppy.isUserInteractionEnabled = true
             plenoFloppy.isUserInteractionEnabled = false
@@ -54,7 +52,7 @@ class ChooseLevelViewController: UIViewController {
             juniorFloppy.isUserInteractionEnabled = true
             plenoFloppy.isUserInteractionEnabled = true
             seniorFloppy.isUserInteractionEnabled = true
-        } else if pointsCounter < 6 {
+        } else {
             eternalNephewFloppy.isUserInteractionEnabled = true
             juniorFloppy.isUserInteractionEnabled = false
             plenoFloppy.isUserInteractionEnabled = false
@@ -119,6 +117,4 @@ class ChooseLevelViewController: UIViewController {
         quizVC.setup(questions: ModelSingleton.shared.questions[level]!)
         self.present(quizVC, animated: true, completion: nil)
     }
-    
-    
 }

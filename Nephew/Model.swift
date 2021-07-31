@@ -32,18 +32,45 @@ class ModelSingleton {
             ],
         .Junior:
             [
-                Question(questions: "Teste 1", answers: ["teste", "teste", "teste", "teste"], correctAnswer: 2),
-                Question(questions: "Teste 2", answers: ["teste", "teste", "teste", "teste"], correctAnswer: 2)
+                Question(questions: "O que eu devo fazer primeiro?", answers: ["Começar desenhando", "Fazer um benchmarking", "Perguntar para o meu mano", "Traçar em cima de alguma do google"], correctAnswer: 1),
+                Question(questions: "Que tipo de pessoa frequenta uma loja de shake?", answers: ["Só a galera da academia", "Só a galera que faz dieta", "Criar uma persona para o público alvo", "desenhar um grande shake musculoso"], correctAnswer: 2),
+                Question(questions: "Como transmitir a vibe loja de shakes no logo", answers: ["Pesquisa de tendências", "Fazer um moodboard", "Juntar todas as formas o shake e a loja", "teste"], correctAnswer: 2),
+                Question(questions: "Esse tal de gestalt o que é?", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "Quero ver como a logo vai ficar aplicada", answers: ["","","",""], correctAnswer: 2),
+                Question(questions: "Reduzi o logo e ficou feião, por que?", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "Beleza, vou ter que refazer, como?", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3)
+                
             ],
         .Pleno:
             [
-                Question(questions: "Qual o primeiro passo", answers: ["cortar", "abrir", "trazer", "mapear"], correctAnswer: 3),
-                Question(questions: "hm biscoito", answers: ["sim", "nao", "true", "fake"], correctAnswer: 3)
+                Question(questions: "Meu mano me disse que eu preciso colocar um grid na tela, para que serve o grid?", answers: ["cortar", "abrir", "trazer", "mapear"], correctAnswer: 3),
+                Question(questions: "O que são constraints?", answers: ["sim", "nao", "true", "fake"], correctAnswer: 3),
+                Question(questions: "De que forma posso representar o status do usuário no sistema?", answers: ["","","",""], correctAnswer: 1),
+                Question(questions: "As fotos de bolo não estão carregando na página", answers: ["","","",""], correctAnswer: 1),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 2),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 1),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3)
             ],
         
         .Senior:
             [
-                Question(questions: "Se voce fosse rato", answers: ["cachorro", "rato", "passaro", "mamaco"], correctAnswer: 1)
+                Question(questions: "Se voce fosse rato", answers: ["cachorro", "rato", "passaro", "mamaco"], correctAnswer: 1),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3),
+                Question(questions: "", answers: ["","","",""], correctAnswer: 3)
             ]
     ]
     

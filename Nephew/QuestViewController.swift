@@ -14,11 +14,12 @@ class QuestViewController: UIViewController {
     @IBOutlet weak var startQuestButton: UIButton!
     
     var quest: QuestGiven!
-    
+    var pointsCounter = ModelSingleton.shared.pointsCounter
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //still have to pass image according to the levels (Charges)
+    
         questImage.image = UIImage(named: quest.questImage)
     }
     
