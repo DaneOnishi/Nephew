@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "Meh.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Meh-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Button-2.png",
+      "filename" : "Meh-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "QuestTwo-GoodEnding.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "QuestTwo-GoodEnding-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "QuestTwo-GoodEnding-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

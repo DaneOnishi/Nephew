@@ -106,18 +106,14 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-8f-eel">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Quest-Three-Card" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-8f-eel">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4x-5u-Joy">
-                                <rect key="frame" x="20" y="150" width="374" height="608"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5v-l8-ZkR">
-                                <rect key="frame" x="184" y="675" width="46" height="30"/>
+                                <rect key="frame" x="94" y="755" width="196" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="Starting-Button"/>
                                 <connections>
                                     <action selector="startQuestButtonPressed:" destination="9uL-7x-REV" eventType="touchUpInside" id="SiX-2h-b9c"/>
                                 </connections>
@@ -128,7 +124,6 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="eQY-8f-eel" id="2Vw-WB-AU2"/>
-                        <outlet property="questImage" destination="e4x-5u-Joy" id="NYQ-3d-NBY"/>
                         <outlet property="startQuestButton" destination="O5v-l8-ZkR" id="v1e-kA-lom"/>
                     </connections>
                 </viewController>
@@ -204,47 +199,55 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Quiz-Background" translatesAutoresizingMaskIntoConstraints="NO" id="icP-cj-hcb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background-1" translatesAutoresizingMaskIntoConstraints="NO" id="icP-cj-hcb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-aL-0rK">
-                                <rect key="frame" x="80" y="508" width="254" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="Button"/>
-                                <connections>
-                                    <action selector="buttonThree:" destination="JbH-aF-7lh" eventType="touchUpInside" id="1gl-Ke-Il0"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rr-4Z-A9C">
-                                <rect key="frame" x="186" y="257" width="42" height="21"/>
+                                <rect key="frame" x="186" y="292" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-l3-jJg">
-                                <rect key="frame" x="80" y="345" width="254" height="55"/>
+                                <rect key="frame" x="16" y="402" width="386" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="Button"/>
+                                <state key="normal" title="Button" backgroundImage="Button-Default">
+                                    <color key="titleColor" red="0.0095726531" green="0.034696765240000003" blue="0.13751477000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonOne:" destination="JbH-aF-7lh" eventType="touchUpInside" id="Drn-92-nA5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rea-8e-5gL">
-                                <rect key="frame" x="80" y="582" width="254" height="55"/>
+                                <rect key="frame" x="17" y="653" width="384" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="Button"/>
+                                <state key="normal" title="Button" backgroundImage="Button-Default">
+                                    <color key="titleColor" red="0.0095726531" green="0.034696765240000003" blue="0.13751477000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonFour:" destination="JbH-aF-7lh" eventType="touchUpInside" id="Rux-pz-0dK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dE-YC-HpG">
-                                <rect key="frame" x="80" y="426" width="254" height="55"/>
+                                <rect key="frame" x="16" y="482" width="386" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="Button"/>
+                                <state key="normal" title="Button" backgroundImage="Button-Default">
+                                    <color key="titleColor" red="0.0095726531" green="0.034696765240000003" blue="0.13751477000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTwo:" destination="JbH-aF-7lh" eventType="touchUpInside" id="8lM-yi-ZUF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-aL-0rK">
+                                <rect key="frame" x="20" y="567" width="383" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="Button-Default">
+                                    <color key="titleColor" red="0.0095726531" green="0.034696765240000003" blue="0.13751477000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonThree:" destination="JbH-aF-7lh" eventType="touchUpInside" id="1gl-Ke-Il0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -261,7 +264,7 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhr-eJ-Bo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="88"/>
+            <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="6gi-vb-blV">
@@ -271,29 +274,45 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dm-43-gBd">
-                                <rect key="frame" x="186" y="373" width="42" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QuestOne_GoodEnding" translatesAutoresizingMaskIntoConstraints="NO" id="EsK-Ju-YSK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD1-zA-bxk">
-                                <rect key="frame" x="182" y="547" width="46" height="30"/>
+                                <rect key="frame" x="267" y="686" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="returnToMainOnPress:" destination="xph-r0-udA" eventType="touchUpInside" id="L2S-6U-gfL"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EsK-Ju-YSK">
-                                <rect key="frame" x="53" y="180" width="305" height="378"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RAD" translatesAutoresizingMaskIntoConstraints="NO" id="EX7-et-L4m">
+                                <rect key="frame" x="20" y="44" width="374" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EX7-et-L4m">
-                                <rect key="frame" x="53" y="566" width="305" height="97"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RAD" translatesAutoresizingMaskIntoConstraints="NO" id="aQF-Xq-uTi">
+                                <rect key="frame" x="18" y="91" width="374" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RAD" translatesAutoresizingMaskIntoConstraints="NO" id="Ql1-zh-yCx">
+                                <rect key="frame" x="32" y="740" width="374" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RAD" translatesAutoresizingMaskIntoConstraints="NO" id="E7l-R9-uuu">
+                                <rect key="frame" x="32" y="786" width="374" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RAD" translatesAutoresizingMaskIntoConstraints="NO" id="YJC-Dd-vwn">
+                                <rect key="frame" x="32" y="830" width="374" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dm-43-gBd">
+                                <rect key="frame" x="149" y="764" width="112" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jYj-ac-Tec"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -301,6 +320,10 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
                     <connections>
                         <outlet property="congratsImage" destination="EsK-Ju-YSK" id="lqP-0m-4u6"/>
                         <outlet property="congratsPhrase" destination="EX7-et-L4m" id="o9N-0O-4zc"/>
+                        <outlet property="congratsPhraseFive" destination="YJC-Dd-vwn" id="XVh-hE-037"/>
+                        <outlet property="congratsPhraseFour" destination="E7l-R9-uuu" id="D35-Cy-uzH"/>
+                        <outlet property="congratsPhraseThree" destination="Ql1-zh-yCx" id="2I0-Is-qeE"/>
+                        <outlet property="congratsPhraseTwo" destination="aQF-Xq-uTi" id="CeI-hV-EaK"/>
                         <outlet property="returnToMainButton" destination="QD1-zA-bxk" id="EMF-I3-AzZ"/>
                         <outlet property="scoreLabel" destination="3Dm-43-gBd" id="g14-az-hwt"/>
                     </connections>
@@ -311,10 +334,13 @@ escolha com cuidado e PRESTE ATENÇÃO no briefing</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Button" width="253.33332824707031" height="54.333332061767578"/>
+        <image name="Background-1" width="833.5" height="1871"/>
+        <image name="Button-Default" width="433" height="68"/>
         <image name="Computer" width="477.5" height="656.5"/>
         <image name="Floppy" width="139" height="141.33332824707031"/>
-        <image name="Quiz-Background" width="872" height="1870"/>
+        <image name="Quest-Three-Card" width="863.5" height="1867"/>
+        <image name="QuestOne_GoodEnding" width="863" height="1867"/>
+        <image name="RAD" width="863" height="105.5"/>
         <image name="Starting-Button" width="425" height="118.5"/>
         <image name="Tech-Background" width="866.5" height="1869"/>
         <systemColor name="systemBackgroundColor">
