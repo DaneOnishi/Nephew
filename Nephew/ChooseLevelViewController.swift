@@ -78,6 +78,10 @@ class ChooseLevelViewController: UIViewController {
         view.addGestureRecognizer(pan)
     }
     
+    func setup(questions: [Question]) {
+        self.questions = questions
+    }
+    
     
     @objc func handlePan(sender: UIPanGestureRecognizer) {
         let floppyView = sender.view!
@@ -102,7 +106,7 @@ class ChooseLevelViewController: UIViewController {
                     } else if self.pointsCounter >= 18 {
                         level = Charges.Senior
                     }
-                    self.presentQuiz(level: level)
+                    self.presentQuiz(charges: level)
                 }
             } else {
                 UIView.animate(withDuration: 0.3) {
@@ -114,13 +118,13 @@ class ChooseLevelViewController: UIViewController {
         }
     }
     
-    func presentQuiz(level: Charges) {
+    func presentQuiz(charges: Charges) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let quizVC = storyboard.instantiateViewController(identifier: "QuizViewController") as? QuizViewController else {
+        guard let questVC = storyboard.instantiateViewController(identifier: "QuestViewController") as? QuestViewController else {
             return
         }
-        quizVC.modalPresentationStyle = .fullScreen
-        quizVC.setup(questions: ModelSingleton.shared.questions[level]!)
-        self.present(quizVC, animated: true, completion: nil)
+        questVC.modalPresentationStyle = .fullScreen
+        questVC.charges = charges
+        self.present(questVC, animated: true, completion: nil)
     }
 }

@@ -39,22 +39,22 @@ class QuizViewController: UIViewController {
             pickQuestion()
         }
         
-//        if self.pointsCounter < 6{
-//            questCard.image = UIImage(named: "Quest-One-Card")
-//        } else if self.pointsCounter >= 6 && self.pointsCounter < 12 {
-//            questCard.image = UIImage(named: "Quest-Two-Card")
-//        } else if self.pointsCounter >= 12 && self.pointsCounter < 18 {
-//            questCard.image = UIImage(named: "Quest-Three-Card")
-//        } else if self.pointsCounter >= 18 {
-//            questCard.image = UIImage(named: "Quest-Four-Card")
-//        }
-
+        //        if self.pointsCounter < 6{
+        //            questCard.image = UIImage(named: "Quest-One-Card")
+        //        } else if self.pointsCounter >= 6 && self.pointsCounter < 12 {
+        //            questCard.image = UIImage(named: "Quest-Two-Card")
+        //        } else if self.pointsCounter >= 12 && self.pointsCounter < 18 {
+        //            questCard.image = UIImage(named: "Quest-Three-Card")
+        //        } else if self.pointsCounter >= 18 {
+        //            questCard.image = UIImage(named: "Quest-Four-Card")
+        //        }
+        
     }
-//    override func viewDidAppear(_ animated: Bool) {
-//        UIView.animate(withDuration: 8, delay: 0, options: .curveLinear) {
-//            self.questCard.alpha = 0
-//        }
-//    }
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        UIView.animate(withDuration: 8, delay: 0, options: .curveLinear) {
+    //            self.questCard.alpha = 0
+    //        }
+    //    }
     
     func pickQuestion() {
         if questions.count > 0 {
@@ -120,12 +120,6 @@ class QuizViewController: UIViewController {
         }
     }
     
-//    @IBAction func startQuizButtonPressed(_ sender: Any) {
-//        UIView.animate(withDuration: 2, delay: 2, options: .curveEaseInOut) {
-//            self.startQuizButton?.alpha = 0
-//            self.questCard.alpha = 0
-//        }
-//    }
     
     func presentScoreView() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

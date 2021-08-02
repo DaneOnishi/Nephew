@@ -102,16 +102,17 @@ enum Charges {
     var questImage: String {
         switch self {
         case .EternalNephew:
-            return "Quest-One"
+            return "Quest-One-Card"
         case .Junior:
-            return "Quest-Two"
+            return "Quest-Two-Card"
         case .Pleno:
-            return "Quest Three"
+            return "Quest-Three-Card"
         case .Senior:
-            return "Quest Four"
+            return "Quest-Four-Card"
         default:
-            return "Quest-Zero"
+            return "Quest-One-Card"
         }
+        
     }
     
 }
