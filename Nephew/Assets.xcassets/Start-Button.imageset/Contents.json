@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Computer-2.png",
+      "filename" : "Start-Button.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Computer-3.png",
+      "filename" : "Start-Button-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Computer-4.png",
+      "filename" : "Start-Button-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

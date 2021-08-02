@@ -15,6 +15,7 @@ class ChooseLevelViewController: UIViewController {
     @IBOutlet weak var eternalNephewFloppy: UIImageView!
     var questions = [Question]()
     var pointsCounter = ModelSingleton.shared.pointsCounter
+    @IBOutlet weak var chooseFreelaLabel: UILabel!
     
     
     @IBOutlet weak var computer: UIImageView!
@@ -28,43 +29,48 @@ class ChooseLevelViewController: UIViewController {
         addPanGesture(view: juniorFloppy)
         addPanGesture(view: plenoFloppy)
         addPanGesture(view: seniorFloppy)
-
+        
         view.bringSubviewToFront(eternalNephewFloppy)
         view .bringSubviewToFront(juniorFloppy)
         view .bringSubviewToFront(plenoFloppy)
         view .bringSubviewToFront(seniorFloppy)
         
+        eternalNephewFloppy.isUserInteractionEnabled = true
+        juniorFloppy.isUserInteractionEnabled = false
+        plenoFloppy.isUserInteractionEnabled = false
+        seniorFloppy.isUserInteractionEnabled = false
+        juniorFloppy.alpha = 0.4
+        plenoFloppy.alpha = 0.4
+        seniorFloppy.alpha = 0.4
+        
         if pointsCounter >= 6 {
-            eternalNephewFloppy.isUserInteractionEnabled = true
             juniorFloppy.isUserInteractionEnabled = true
-            plenoFloppy.isUserInteractionEnabled = false
-            seniorFloppy.isUserInteractionEnabled = false
-            plenoFloppy.alpha = 0.4
-            seniorFloppy.alpha = 0.4
-        } else if pointsCounter >= 12 {
-            eternalNephewFloppy.isUserInteractionEnabled = true
-            juniorFloppy.isUserInteractionEnabled = true
-            plenoFloppy.isUserInteractionEnabled = true
-            seniorFloppy.isUserInteractionEnabled = false
-            seniorFloppy.alpha = 0.4
-        } else if pointsCounter >= 18 {
-            eternalNephewFloppy.isUserInteractionEnabled = true
-            juniorFloppy.isUserInteractionEnabled = true
-            plenoFloppy.isUserInteractionEnabled = true
-            seniorFloppy.isUserInteractionEnabled = true
-        } else {
-            eternalNephewFloppy.isUserInteractionEnabled = true
-            juniorFloppy.isUserInteractionEnabled = false
-            plenoFloppy.isUserInteractionEnabled = false
-            seniorFloppy.isUserInteractionEnabled = false
-            juniorFloppy.alpha = 0.4
-            plenoFloppy.alpha = 0.4
-            seniorFloppy.alpha = 0.4
+            juniorFloppy.alpha = 1
         }
+        
+        if pointsCounter >= 12 {
+            plenoFloppy.isUserInteractionEnabled = true
+            plenoFloppy.alpha = 1
+        }
+        
+        if pointsCounter >= 18 {
+            seniorFloppy.isUserInteractionEnabled = true
+            seniorFloppy.alpha = 1
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .repeat) {
+            self.chooseFreelaLabel.alpha = 0
+        } completion: { _ in
+            self.chooseFreelaLabel.alpha = 1
+        }
+        
     }
     
     func addPanGesture(view: UIView) {
@@ -72,7 +78,7 @@ class ChooseLevelViewController: UIViewController {
         view.addGestureRecognizer(pan)
     }
     
-
+    
     @objc func handlePan(sender: UIPanGestureRecognizer) {
         let floppyView = sender.view!
         let translation = sender.translation(in: view)
@@ -80,7 +86,7 @@ class ChooseLevelViewController: UIViewController {
         switch sender.state {
         case .began:
             self.floppyViewOrigin = floppyView.frame.origin
-         case .changed:
+        case .changed:
             floppyView.center = CGPoint(x: (floppyView.center.x) + translation.x, y: (floppyView.center.y) + translation.y)
             sender.setTranslation(CGPoint.zero, in: view)
         case .ended:

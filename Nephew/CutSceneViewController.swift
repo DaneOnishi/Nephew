@@ -29,7 +29,7 @@ class CutSceneViewController: UIViewController {
                 self.cutSceneLogo.alpha = 0
                 
             }completion: { _ in
-                UIView.animate(withDuration: 0.2,
+                UIView.animate(withDuration: 0.8,
                                delay: 2,
                                options: .curveEaseInOut) {
                     self.disclaimerCutScene.alpha = 1

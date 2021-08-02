@@ -27,41 +27,51 @@ class ScoreViewController: UIViewController {
         super.viewDidLoad()
         // put navigation to work and sees if its storing the points
         scoreLabel.text = ("\(ModelSingleton.shared.pointsCounter.description) Pontos")
+        
+        changeCongrats()
+        
+        view.sendSubviewToBack(congratsImage)
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.2, delay: 2, options: .curveEaseInOut) {
-            self.scoreLabel.alpha = 0
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
+           self.scoreLabel.alpha = 0
         } completion: { _ in
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
                 self.congratsPhrase.alpha = 1
+                print("i love baiacu")
             } completion: { _ in
-                UIView.animate(withDuration: 0.2) {
-                    self.congratsPhrase.alpha = 0
+                UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
+                   self.congratsPhrase.alpha = 0
                     self.congratsPhraseTwo.alpha = 1
+                    print("i love baiacu")
                 } completion: { _ in
-                    UIView.animate(withDuration: 0.2) {
-                        self.congratsPhraseTwo.alpha = 0
+                    UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
+                       self.congratsPhraseTwo.alpha = 0
                         self.congratsPhraseThree.alpha = 1
+                        print("i love baiacu")
                     } completion: { _ in
-                        UIView.animate(withDuration: 0.2) {
-                            self.congratsPhraseThree.alpha = 0
+                        UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
+                           self.congratsPhraseThree.alpha = 0
                             self.congratsPhraseFour.alpha = 1
+                            print("i love baiacu")
                         } completion: { _ in
-                            UIView.animate(withDuration: 0.2) {
-                                self.congratsPhraseFour.alpha = 0
+                            UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
+                               self.congratsPhraseFour.alpha = 0
                                 self.congratsPhraseFive.alpha = 1
+                                print("i love baiacu")
                             } completion: { _ in
-                                UIView.animate(withDuration: 0.2) {
-                                    self.congratsPhraseFive.alpha = 0
+                                UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
+                                   self.congratsPhraseFive.alpha = 0
                                 } completion: { _ in
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                        guard let chooseLevelVC = storyboard.instantiateViewController(identifier: "ChooseLevelViewController") as? ChooseLevelViewController else { return }
-                                        chooseLevelVC.modalPresentationStyle = .fullScreen
-                                        self.present(chooseLevelVC, animated: true, completion: nil)
-                                    }
+                                   DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                       let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                       guard let chooseLevelVC = storyboard.instantiateViewController(identifier: "ChooseLevelViewController") as? ChooseLevelViewController else { return }
+                                       chooseLevelVC.modalPresentationStyle = .fullScreen
+                                       self.present(chooseLevelVC, animated: true, completion: nil)
+                                   }
                                 }
                             }
                         }

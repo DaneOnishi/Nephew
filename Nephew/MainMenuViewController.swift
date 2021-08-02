@@ -21,8 +21,8 @@ class MainMenuViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        UIView.animate(withDuration: 0.1,
-                       delay: 1,
+        UIView.animate(withDuration: 0.2,
+                       delay: 0,
                        options: .repeat) {
             self.logoLabel.alpha = 0
             self.logoLabel.alpha = 1
@@ -35,4 +35,6 @@ class MainMenuViewController: UIViewController {
         chooseLevelVC.modalPresentationStyle = .fullScreen
         self.present(chooseLevelVC, animated: true, completion: nil)
     }
+    
+    
 }

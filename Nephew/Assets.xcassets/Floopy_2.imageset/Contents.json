@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Computer-2.png",
+      "filename" : "Floopy_2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Computer-3.png",
+      "filename" : "Floopy_2-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Computer-4.png",
+      "filename" : "Floopy_2-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
