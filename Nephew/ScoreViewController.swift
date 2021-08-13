@@ -84,11 +84,11 @@ class ScoreViewController: UIViewController {
     func changeCongrats() {
         if scorePoints >= minimumScorePointsToLevel2 && scorePoints <= minimumScorePointsToLevel3  {
             congratsImage.image = UIImage(named: "QuestOne_GoodEnding")
-            congratsPhrase.image = UIImage(named: "Meh")
-            congratsPhraseTwo.image = UIImage(named: "Meh")
-            congratsPhraseThree.image = UIImage(named: "Meh")
-            congratsPhraseFour.image = UIImage(named: "Meh")
-            congratsPhraseFive.image = UIImage(named: "Meh")
+            congratsPhrase.image = UIImage(named: "RAD")
+            congratsPhraseTwo.image = UIImage(named: "RAD")
+            congratsPhraseThree.image = UIImage(named: "RAD")
+            congratsPhraseFour.image = UIImage(named: "RAD")
+            congratsPhraseFive.image = UIImage(named: "RAD")
         } else if scorePoints <= minimumScorePointsToLevel2 {
             congratsImage.image = UIImage(named: "QuestOne_BadEnding")
             congratsPhrase.image = UIImage(named: "Meh")
@@ -98,11 +98,11 @@ class ScoreViewController: UIViewController {
             congratsPhraseFive.image = UIImage(named: "Meh")
         } else if scorePoints >= minimumScorePointsToLevel3 {
             congratsImage.image = UIImage(named: "QuestThree-GoodEnding")
-            congratsPhrase.image = UIImage(named: "Meh")
-            congratsPhraseTwo.image = UIImage(named: "Meh")
-            congratsPhraseThree.image = UIImage(named: "Meh")
-            congratsPhraseFour.image = UIImage(named: "Meh")
-            congratsPhraseFive.image = UIImage(named: "Meh")
+            congratsPhrase.image = UIImage(named: "Amazing")
+            congratsPhraseTwo.image = UIImage(named: "Amazing")
+            congratsPhraseThree.image = UIImage(named: "Amazing")
+            congratsPhraseFour.image = UIImage(named: "Amazing")
+            congratsPhraseFive.image = UIImage(named: "Amazing")
         } else if scorePoints <= minimumScorePointsToLevel3 {
             congratsImage.image = UIImage(named: "QuestThree-BadEnding")
             congratsPhrase.image = UIImage(named: "Meh")

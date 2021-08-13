@@ -18,6 +18,7 @@
 		418E740D26B1ED4300F039BE /* ChooseLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E740C26B1ED4300F039BE /* ChooseLevelViewController.swift */; };
 		418E740F26B23FD500F039BE /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E740E26B23FD500F039BE /* MainMenuViewController.swift */; };
 		418E741126B25C9F00F039BE /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E741026B25C9F00F039BE /* ScoreViewController.swift */; };
+		419B560E26C6AE7700FDD67C /* SFXSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B560D26C6AE7700FDD67C /* SFXSingleton.swift */; };
 		41E6782026B32A0E00F2180B /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6781F26B32A0D00F2180B /* QuestViewController.swift */; };
 		41E6782226B3447300F2180B /* CutSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6782126B3447300F2180B /* CutSceneViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		418E740C26B1ED4300F039BE /* ChooseLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLevelViewController.swift; sourceTree = "<group>"; };
 		418E740E26B23FD500F039BE /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		418E741026B25C9F00F039BE /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		419B560D26C6AE7700FDD67C /* SFXSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFXSingleton.swift; sourceTree = "<group>"; };
 		41E6781F26B32A0D00F2180B /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
 		41E6782126B3447300F2180B /* CutSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutSceneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				418E73FF26B07F4600F039BE /* LaunchScreen.storyboard */,
 				418E740226B07F4600F039BE /* Info.plist */,
 				418E740826B083AE00F039BE /* Model.swift */,
+				419B560D26C6AE7700FDD67C /* SFXSingleton.swift */,
 			);
 			path = Nephew;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419B560E26C6AE7700FDD67C /* SFXSingleton.swift in Sources */,
 				418E73F926B07F4400F039BE /* ViewController.swift in Sources */,
 				418E740B26B0D42000F039BE /* QuizViewController.swift in Sources */,
 				418E740D26B1ED4300F039BE /* ChooseLevelViewController.swift in Sources */,

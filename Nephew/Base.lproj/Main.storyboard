@@ -16,18 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nephew_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yB-FX-ws2">
-                                <rect key="frame" x="80" y="425" width="255" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="58"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxR-Mc-SmL">
-                                <rect key="frame" x="29" y="365" width="356" height="212"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxR-Mc-SmL">
+                                <rect key="frame" x="29" y="348" width="356" height="210"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="aVy-XM-lU3"/>
+                                </constraints>
                                 <string key="text">Nephew é um jogo que simula a realidade 
 
 Suas respostas trarão consequências na sua vida profissional
@@ -37,9 +32,24 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nephew_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yB-FX-ws2">
+                                <rect key="frame" x="79" y="425" width="256" height="56"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="58"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ogb-s3-SOm"/>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.027450980392156862" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4yB-FX-ws2" firstAttribute="top" secondItem="ogb-s3-SOm" secondAttribute="top" constant="381" id="1v5-Jm-0TD"/>
+                            <constraint firstItem="4yB-FX-ws2" firstAttribute="centerY" secondItem="ogb-s3-SOm" secondAttribute="centerY" id="BA7-Oh-dWE"/>
+                            <constraint firstItem="FxR-Mc-SmL" firstAttribute="centerX" secondItem="ogb-s3-SOm" secondAttribute="centerX" id="Daj-NV-Jhp"/>
+                            <constraint firstItem="4yB-FX-ws2" firstAttribute="centerX" secondItem="ogb-s3-SOm" secondAttribute="centerX" id="LDK-2o-GHe"/>
+                            <constraint firstItem="FxR-Mc-SmL" firstAttribute="centerY" secondItem="ogb-s3-SOm" secondAttribute="centerY" id="ZQ6-dx-EHV"/>
+                            <constraint firstItem="ogb-s3-SOm" firstAttribute="trailing" secondItem="4yB-FX-ws2" secondAttribute="trailing" constant="79" id="qK2-fO-uVR"/>
+                            <constraint firstItem="FxR-Mc-SmL" firstAttribute="width" secondItem="ogb-s3-SOm" secondAttribute="height" multiplier="178:409" id="rFa-Bv-G5F"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cutSceneLogo" destination="4yB-FX-ws2" id="dXs-RK-21A"/>
@@ -58,21 +68,18 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main-Background" translatesAutoresizingMaskIntoConstraints="NO" id="Est-ms-Zwc">
-                                <rect key="frame" x="0.0" y="-9" width="414" height="913"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main-Background" translatesAutoresizingMaskIntoConstraints="NO" id="Est-ms-Zwc">
+                                <rect key="frame" x="0.0" y="-3.5" width="414" height="913"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sy3-2C-L9c">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sy3-2C-L9c">
                                 <rect key="frame" x="95" y="698" width="225" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Start-Button"/>
                                 <connections>
                                     <action selector="pressStartButton:" destination="ofc-Kn-ecv" eventType="touchUpInside" id="pez-72-Ppc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nephew_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5h-wb-irN">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nephew_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5h-wb-irN">
                                 <rect key="frame" x="95" y="559" width="255" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="58"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,6 +87,21 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h8S-w5-MLF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h8S-w5-MLF" firstAttribute="trailing" secondItem="Sy3-2C-L9c" secondAttribute="trailing" constant="94" id="4io-Z4-V0k"/>
+                            <constraint firstItem="Est-ms-Zwc" firstAttribute="centerX" secondItem="h8S-w5-MLF" secondAttribute="centerX" id="6Wp-uD-3ja"/>
+                            <constraint firstItem="h8S-w5-MLF" firstAttribute="trailing" secondItem="r5h-wb-irN" secondAttribute="trailing" constant="64" id="IOk-ea-rw1"/>
+                            <constraint firstItem="r5h-wb-irN" firstAttribute="leading" secondItem="h8S-w5-MLF" secondAttribute="leading" constant="95" id="d21-8u-g8O"/>
+                            <constraint firstItem="Est-ms-Zwc" firstAttribute="width" secondItem="h8S-w5-MLF" secondAttribute="height" multiplier="207:409" id="gcx-9Y-ALn"/>
+                            <constraint firstItem="Sy3-2C-L9c" firstAttribute="top" secondItem="h8S-w5-MLF" secondAttribute="top" constant="654" id="r4U-DP-5xf"/>
+                            <constraint firstItem="h8S-w5-MLF" firstAttribute="bottom" secondItem="Sy3-2C-L9c" secondAttribute="bottom" constant="101" id="s9t-mV-wRV"/>
+                            <constraint firstItem="Sy3-2C-L9c" firstAttribute="leading" secondItem="h8S-w5-MLF" secondAttribute="leading" constant="95" id="uXE-mg-jn4"/>
+                            <constraint firstItem="r5h-wb-irN" firstAttribute="top" secondItem="h8S-w5-MLF" secondAttribute="top" constant="515" id="usf-9c-X0w"/>
+                            <constraint firstItem="Est-ms-Zwc" firstAttribute="height" secondItem="h8S-w5-MLF" secondAttribute="height" multiplier="1.11614" id="vDs-lh-9NE"/>
+                            <constraint firstItem="Est-ms-Zwc" firstAttribute="centerY" secondItem="h8S-w5-MLF" secondAttribute="centerY" id="vfy-AM-4KL"/>
+                            <constraint firstItem="Est-ms-Zwc" firstAttribute="width" secondItem="h8S-w5-MLF" secondAttribute="width" id="x9c-En-Dov"/>
+                            <constraint firstItem="h8S-w5-MLF" firstAttribute="bottom" secondItem="r5h-wb-irN" secondAttribute="bottom" constant="210" id="yab-Ps-D8s"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="logoLabel" destination="r5h-wb-irN" id="aeK-Gf-IN6"/>
@@ -98,13 +120,11 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Quest-Three-Card" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-8f-eel">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quest-Three-Card" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-8f-eel">
+                                <rect key="frame" x="0.0" y="-480.5" width="414" height="1867"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5v-l8-ZkR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5v-l8-ZkR">
                                 <rect key="frame" x="109" y="752" width="196" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Starting-Button"/>
                                 <connections>
                                     <action selector="startQuestButtonPressed:" destination="9uL-7x-REV" eventType="touchUpInside" id="SiX-2h-b9c"/>
@@ -113,6 +133,16 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QUz-bo-w4X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QUz-bo-w4X" firstAttribute="bottom" secondItem="O5v-l8-ZkR" secondAttribute="bottom" constant="55" id="4Fq-pb-g8y"/>
+                            <constraint firstItem="O5v-l8-ZkR" firstAttribute="top" secondItem="QUz-bo-w4X" secondAttribute="top" constant="708" id="5GW-pN-W6O"/>
+                            <constraint firstItem="O5v-l8-ZkR" firstAttribute="leading" secondItem="QUz-bo-w4X" secondAttribute="leading" constant="109" id="COJ-E9-z1b"/>
+                            <constraint firstItem="eQY-8f-eel" firstAttribute="centerX" secondItem="QUz-bo-w4X" secondAttribute="centerX" id="Dt8-CR-vBD"/>
+                            <constraint firstItem="QUz-bo-w4X" firstAttribute="trailing" secondItem="O5v-l8-ZkR" secondAttribute="trailing" constant="109" id="Rwh-jZ-fjH"/>
+                            <constraint firstItem="eQY-8f-eel" firstAttribute="width" secondItem="QUz-bo-w4X" secondAttribute="height" multiplier="207:409" id="XGY-FA-8Vt"/>
+                            <constraint firstItem="O5v-l8-ZkR" firstAttribute="width" secondItem="QUz-bo-w4X" secondAttribute="height" multiplier="98:409" id="e8B-xO-WhI"/>
+                            <constraint firstItem="eQY-8f-eel" firstAttribute="centerY" secondItem="QUz-bo-w4X" secondAttribute="centerY" id="nyx-mS-bNC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="eQY-8f-eel" id="2Vw-WB-AU2"/>
@@ -131,45 +161,38 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background-OffWhite" translatesAutoresizingMaskIntoConstraints="NO" id="YeK-Mz-Adl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-OffWhite" translatesAutoresizingMaskIntoConstraints="NO" id="YeK-Mz-Adl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Computer" translatesAutoresizingMaskIntoConstraints="NO" id="tb2-Kf-GXz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Computer" translatesAutoresizingMaskIntoConstraints="NO" id="tb2-Kf-GXz">
                                 <rect key="frame" x="87" y="230" width="240" height="245"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floopy_4" translatesAutoresizingMaskIntoConstraints="NO" id="SGO-Lf-82i">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Floopy_4" translatesAutoresizingMaskIntoConstraints="NO" id="SGO-Lf-82i">
                                 <rect key="frame" x="87" y="535" width="103" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floopy_3" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-Z8-8CW">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Floopy_3" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-Z8-8CW">
                                 <rect key="frame" x="240" y="535" width="102" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floopy_1" translatesAutoresizingMaskIntoConstraints="NO" id="fl2-Kh-cUp">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Floopy_1" translatesAutoresizingMaskIntoConstraints="NO" id="fl2-Kh-cUp">
                                 <rect key="frame" x="240" y="684" width="102" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floopy_2" translatesAutoresizingMaskIntoConstraints="NO" id="arx-i7-Ij1">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Floopy_2" translatesAutoresizingMaskIntoConstraints="NO" id="arx-i7-Ij1">
                                 <rect key="frame" x="89" y="684" width="102" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escolha um freela" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ja-An-OoU">
-                                <rect key="frame" x="0.0" y="100" width="423" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha um freela" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ja-An-OoU">
+                                <rect key="frame" x="0.0" y="100" width="423" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
                                 <color key="textColor" red="0.087015412750000007" green="0.1246412471" blue="0.17255496980000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -177,6 +200,36 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SGO-Lf-82i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="0gD-gH-9Di"/>
+                            <constraint firstItem="arx-i7-Ij1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="20R-zu-2EQ"/>
+                            <constraint firstItem="i7L-Z8-8CW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="491" id="396-Mw-aGn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="YeK-Mz-Adl" secondAttribute="top" constant="44" id="78q-2g-2Iz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SGO-Lf-82i" secondAttribute="trailing" constant="224" id="Csn-je-9wt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="arx-i7-Ij1" secondAttribute="trailing" constant="223" id="D0h-JZ-04E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YeK-Mz-Adl" secondAttribute="trailing" id="F1r-gH-hd3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="arx-i7-Ij1" secondAttribute="bottom" constant="80" id="Fxu-P9-4fq"/>
+                            <constraint firstItem="tb2-Kf-GXz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="186" id="IZA-Ax-8j2"/>
+                            <constraint firstItem="1ja-An-OoU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="9" id="KNt-R5-6m2"/>
+                            <constraint firstItem="YeK-Mz-Adl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LaW-k2-5zZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tb2-Kf-GXz" secondAttribute="trailing" constant="87" id="Lrh-Bh-mjh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SGO-Lf-82i" secondAttribute="bottom" constant="229" id="MZr-Uz-C7Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tb2-Kf-GXz" secondAttribute="bottom" constant="387" id="N5F-wV-JDT"/>
+                            <constraint firstItem="YeK-Mz-Adl" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="207:409" id="SlM-IL-47r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i7L-Z8-8CW" secondAttribute="trailing" constant="72" id="Y4j-u3-fYi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fl2-Kh-cUp" secondAttribute="trailing" constant="72" id="bIt-n7-1ec"/>
+                            <constraint firstItem="1ja-An-OoU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="bLu-Uu-887"/>
+                            <constraint firstItem="fl2-Kh-cUp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="640" id="bhD-KD-Oow"/>
+                            <constraint firstItem="SGO-Lf-82i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="491" id="dBk-CR-Lb9"/>
+                            <constraint firstItem="1ja-An-OoU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hRC-yM-qdC"/>
+                            <constraint firstItem="YeK-Mz-Adl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="jI5-sj-3Ul"/>
+                            <constraint firstItem="i7L-Z8-8CW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="240" id="ka6-j2-yOq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i7L-Z8-8CW" secondAttribute="bottom" constant="229" id="nBt-yE-tke"/>
+                            <constraint firstItem="arx-i7-Ij1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="640" id="qYV-Oc-woh"/>
+                            <constraint firstItem="tb2-Kf-GXz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="wAe-yH-GvH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fl2-Kh-cUp" secondAttribute="bottom" constant="80" id="xqa-KL-Xu8"/>
+                            <constraint firstItem="fl2-Kh-cUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="240" id="zYB-gw-NZg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="chooseFreelaLabel" destination="1ja-An-OoU" id="3Gp-JE-qFK"/>
