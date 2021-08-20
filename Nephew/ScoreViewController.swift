@@ -22,6 +22,8 @@ class ScoreViewController: UIViewController {
     var minimumScorePointsToLevel2 = 6
     var minimumScorePointsToLevel3 = 12
     var minimumScorePointsToLevel4 = 18
+    var minimumScorePointsToGoodEnding4 = 24
+    var maxPoints = 30
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,28 +85,56 @@ class ScoreViewController: UIViewController {
     
     func changeCongrats() {
         if scorePoints >= minimumScorePointsToLevel2 && scorePoints <= minimumScorePointsToLevel3  {
-            congratsImage.image = UIImage(named: "QuestOne_GoodEnding")
+            congratsImage.image = UIImage(named: "Quest-One-Good-Ending")
             congratsPhrase.image = UIImage(named: "RAD")
             congratsPhraseTwo.image = UIImage(named: "RAD")
             congratsPhraseThree.image = UIImage(named: "RAD")
             congratsPhraseFour.image = UIImage(named: "RAD")
             congratsPhraseFive.image = UIImage(named: "RAD")
         } else if scorePoints <= minimumScorePointsToLevel2 {
-            congratsImage.image = UIImage(named: "QuestOne_BadEnding")
+            congratsImage.image = UIImage(named: "Quest-One-Bad-Ending")
             congratsPhrase.image = UIImage(named: "Meh")
             congratsPhraseTwo.image = UIImage(named: "Meh")
             congratsPhraseThree.image = UIImage(named: "Meh")
             congratsPhraseFour.image = UIImage(named: "Meh")
             congratsPhraseFive.image = UIImage(named: "Meh")
-        } else if scorePoints >= minimumScorePointsToLevel3 {
-            congratsImage.image = UIImage(named: "QuestThree-GoodEnding")
+        } else if scorePoints >= minimumScorePointsToLevel3 && scorePoints <= minimumScorePointsToLevel4 {
+            congratsImage.image = UIImage(named: "Quest-Two-Good-Ending")
             congratsPhrase.image = UIImage(named: "Amazing")
             congratsPhraseTwo.image = UIImage(named: "Amazing")
             congratsPhraseThree.image = UIImage(named: "Amazing")
             congratsPhraseFour.image = UIImage(named: "Amazing")
             congratsPhraseFive.image = UIImage(named: "Amazing")
         } else if scorePoints <= minimumScorePointsToLevel3 {
-            congratsImage.image = UIImage(named: "QuestThree-BadEnding")
+            congratsImage.image = UIImage(named: "Quest-Two-Bad-Ending")
+            congratsPhrase.image = UIImage(named: "Meh")
+            congratsPhraseTwo.image = UIImage(named: "Meh")
+            congratsPhraseThree.image = UIImage(named: "Meh")
+            congratsPhraseFour.image = UIImage(named: "Meh")
+            congratsPhraseFive.image = UIImage(named: "Meh")
+        } else if scorePoints >= minimumScorePointsToLevel4 && scorePoints <= minimumScorePointsToGoodEnding4 {
+            congratsImage.image = UIImage(named: "Quest-Three-Good-Ending")
+            congratsPhrase.image = UIImage(named: "Meh")
+            congratsPhraseTwo.image = UIImage(named: "Meh")
+            congratsPhraseThree.image = UIImage(named: "Meh")
+            congratsPhraseFour.image = UIImage(named: "Meh")
+            congratsPhraseFive.image = UIImage(named: "Meh")
+        } else if scorePoints <= minimumScorePointsToLevel4  {
+            congratsImage.image = UIImage(named: "Quest-Three-Bad-Ending")
+            congratsPhrase.image = UIImage(named: "Meh")
+            congratsPhraseTwo.image = UIImage(named: "Meh")
+            congratsPhraseThree.image = UIImage(named: "Meh")
+            congratsPhraseFour.image = UIImage(named: "Meh")
+            congratsPhraseFive.image = UIImage(named: "Meh")
+        } else if scorePoints >= minimumScorePointsToGoodEnding4 && scorePoints <= maxPoints {
+            congratsImage.image = UIImage(named: "Quest-Four-Good-Ending")
+            congratsPhrase.image = UIImage(named: "Meh")
+            congratsPhraseTwo.image = UIImage(named: "Meh")
+            congratsPhraseThree.image = UIImage(named: "Meh")
+            congratsPhraseFour.image = UIImage(named: "Meh")
+            congratsPhraseFive.image = UIImage(named: "Meh")
+        } else if scorePoints <= minimumScorePointsToGoodEnding4 {
+            congratsImage.image = UIImage(named: "Quest-Four-Bad-Ending")
             congratsPhrase.image = UIImage(named: "Meh")
             congratsPhraseTwo.image = UIImage(named: "Meh")
             congratsPhraseThree.image = UIImage(named: "Meh")
@@ -112,7 +142,6 @@ class ScoreViewController: UIViewController {
             congratsPhraseFive.image = UIImage(named: "Meh")
         }
     }
-    
     
     
     @IBAction func returnToMainOnPress(_ sender: Any) {

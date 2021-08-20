@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainMenuViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class MainMenuViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        SFXMusicSingleton.shared.playMainMusic()
     }
     
     
@@ -34,6 +36,7 @@ class MainMenuViewController: UIViewController {
         guard let chooseLevelVC = storyboard.instantiateViewController(identifier: "ChooseLevelViewController") as? ChooseLevelViewController else { return }
         chooseLevelVC.modalPresentationStyle = .fullScreen
         self.present(chooseLevelVC, animated: true, completion: nil)
+        SFXMusicSingleton.shared.soundPopPops()
     }
     
     

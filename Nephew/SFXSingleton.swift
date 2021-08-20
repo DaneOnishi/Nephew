@@ -13,14 +13,13 @@ class SFXMusicSingleton {
     fileprivate var currentPlayer: AVAudioPlayer?
     
     
-    fileprivate func playMusic(named name: String, with fileExtension: String) {
+    fileprivate func playMusic(named name: String, with fileExtension: String, number loops: Int) {
         
-        currentPlayer?.stop()
         
         let url: URL = Bundle.main.url(forResource: name, withExtension: fileExtension)!
         let player = try! AVAudioPlayer(contentsOf: url, fileTypeHint: nil)
         
-        player.numberOfLoops = 1
+        player.numberOfLoops = loops
         player.prepareToPlay()
         player.volume = 0.3
         player.play()
@@ -29,7 +28,11 @@ class SFXMusicSingleton {
     }
     
     func playMainMusic() {
-        playMusic(named: "Alien Imposter By HeatleyBros", with: ".mp3")
+        playMusic(named: "Luminare By HeatleyBros (Loop)", with: ".mp3", number: 3)
         
+    }
+    
+    func soundPopPops() {
+        playMusic(named: "PopSound", with: "mp3", number: 0)
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 
 struct Question {
@@ -26,6 +27,7 @@ class QuizViewController: UIViewController {
     var correctAnswer = Int()
     var pointsCounter = ModelSingleton.shared.pointsCounter
     let generator = UINotificationFeedbackGenerator()
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +87,8 @@ class QuizViewController: UIViewController {
             pickQuestion()
             generator.notificationOccurred(.error)
         }
+        
+        SFXMusicSingleton.shared.soundPopPops()
     }
     
     @IBAction func buttonTwo(_ sender: Any) {
@@ -96,6 +100,8 @@ class QuizViewController: UIViewController {
             pickQuestion()
             generator.notificationOccurred(.error)
         }
+        
+        SFXMusicSingleton.shared.soundPopPops()
     }
     
     @IBAction func buttonThree(_ sender: Any) {
@@ -107,6 +113,8 @@ class QuizViewController: UIViewController {
             pickQuestion()
             generator.notificationOccurred(.error)
         }
+        
+        SFXMusicSingleton.shared.soundPopPops()
     }
     
     @IBAction func buttonFour(_ sender: Any) {
@@ -118,6 +126,8 @@ class QuizViewController: UIViewController {
             pickQuestion()
             generator.notificationOccurred(.error)
         }
+        
+        SFXMusicSingleton.shared.soundPopPops()
     }
     
     

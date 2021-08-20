@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		417B5A0D26CF047A00CFDE7B /* PopSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */; };
+		417B5A0F26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 417B5A0E26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 */; };
 		418E73F526B07F4400F039BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E73F426B07F4400F039BE /* AppDelegate.swift */; };
 		418E73F726B07F4400F039BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E73F626B07F4400F039BE /* SceneDelegate.swift */; };
 		418E73F926B07F4400F039BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E73F826B07F4400F039BE /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PopSound.mp3; sourceTree = "<group>"; };
+		417B5A0E26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Luminare By HeatleyBros (Loop).mp3"; sourceTree = "<group>"; };
 		418E73F126B07F4400F039BE /* Nephew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nephew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418E73F426B07F4400F039BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		418E73F626B07F4400F039BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				418E741026B25C9F00F039BE /* ScoreViewController.swift */,
 				418E73FA26B07F4400F039BE /* Main.storyboard */,
 				418E73FD26B07F4600F039BE /* Assets.xcassets */,
+				417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */,
+				417B5A0E26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 */,
 				418E73FF26B07F4600F039BE /* LaunchScreen.storyboard */,
 				418E740226B07F4600F039BE /* Info.plist */,
 				418E740826B083AE00F039BE /* Model.swift */,
@@ -150,6 +156,8 @@
 			files = (
 				418E740126B07F4600F039BE /* LaunchScreen.storyboard in Resources */,
 				418E73FE26B07F4600F039BE /* Assets.xcassets in Resources */,
+				417B5A0F26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 in Resources */,
+				417B5A0D26CF047A00CFDE7B /* PopSound.mp3 in Resources */,
 				418E73FC26B07F4400F039BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

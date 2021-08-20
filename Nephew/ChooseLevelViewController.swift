@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ChooseLevelViewController: UIViewController {
     
@@ -100,10 +101,13 @@ class ChooseLevelViewController: UIViewController {
                 } completion: { _ in
                     var level = Charges.EternalNephew
                     if self.pointsCounter >= 6{
+                        SFXMusicSingleton.shared.soundPopPops()
                         level = Charges.Junior
                     } else if self.pointsCounter >= 12 {
+                        SFXMusicSingleton.shared.soundPopPops()
                         level = Charges.Pleno
                     } else if self.pointsCounter >= 18 {
+                        SFXMusicSingleton.shared.soundPopPops()
                         level = Charges.Senior
                     }
                     self.presentQuiz(charges: level)

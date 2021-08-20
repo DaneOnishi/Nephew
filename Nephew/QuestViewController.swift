@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QuestViewController: UIViewController {
-
+    
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var startQuestButton: UIButton!
     
@@ -23,7 +24,8 @@ class QuestViewController: UIViewController {
     }
     
     @IBAction func startQuestButtonPressed(_ sender: Any) {
-       presentQuiz(level: charges!)
+        presentQuiz(level: charges!)
+        SFXMusicSingleton.shared.soundPopPops()
     }
     
     
