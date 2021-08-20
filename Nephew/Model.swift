@@ -39,14 +39,14 @@ class ModelSingleton {
                 Question(questions: "Quero ver como a logo vai ficar aplicada", answers: ["Usar a imaginação","Usar um mockup","Pedir uma opinião para o meu mano","Usar um projetor em um copo de shake"], correctAnswer: 1),
                 Question(questions: "Reduzi o logo e ficou feião, por que?", answers: ["Não foram feitas reduções da marca","Usar só a versão criada","Exportar em png, depois em jpeg, depois em autocad","Nem tá ruim assim"], correctAnswer: 0),
                 Question(questions: "Bora refazer, como?", answers: ["Pegar o que foi criado e comeaçar uma GA","Ir numa loja de shake e copiar o logo com papel vegetal","Abandonar o freela","dois circulo duas linhas"], correctAnswer: 0),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3)
+                Question(questions: "Devo seguir todas as últimas tendências?", answers: ["Sim, passar o resto do dia vendo tiktok","Ir contra todas as tendências","O meu gosto é superior a todos os outros gostos","Uma marca deve ser atemporal e não se deixar levar"], correctAnswer: 3),
+                Question(questions: "Pedir opinião do cliente antes de enviar os arquivos finais?", answers: ["Sim, para não mamar o contrato depois","Não, está perfeito, impecável","Jogar num forum da web, \nopinião da web é sempre melhor","Enviar, seja o que quiser ser"], correctAnswer: 0),
+                Question(questions: "Qual a melhor forma de mandar o arquivo final?", answers: [".Zap",".CAD",".Metafile","Exportar nos formatos acordados no contrato"], correctAnswer: 3)
                 
             ],
         .Pleno:
             [
-                Question(questions: "Meu mano me disse que eu preciso colocar um grid na tela, para que serve o grid?", answers: ["Em breve", "Em breve", "Em breve", "Em breve"], correctAnswer: 3),
+                Question(questions: "Meu mano me disse que eu preciso colocar um grid na tela, para que serve o grid?", answers: ["Para fazer layouts xadrezinho", "Para distribuir proporcionalmente os elementos gráficos", "Em breve", "Em breve"], correctAnswer: 2),
                 Question(questions: "O que são constraints?", answers: ["Em breve", "Em breve", "Em breve", "Em breve"], correctAnswer: 3),
                 Question(questions: "De que forma posso representar o status do usuário no sistema?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
                 Question(questions: "As fotos de bolo não estão carregando na página", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),

@@ -38,32 +38,32 @@ class ScoreViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
+        UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseInOut) {
            self.scoreLabel.alpha = 0
         } completion: { _ in
             UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
                 self.congratsPhrase.alpha = 1
-                print("i love baiacu")
+
             } completion: { _ in
                 UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
                    self.congratsPhrase.alpha = 0
                     self.congratsPhraseTwo.alpha = 1
-                    print("i love baiacu")
+    
                 } completion: { _ in
                     UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
                        self.congratsPhraseTwo.alpha = 0
                         self.congratsPhraseThree.alpha = 1
-                        print("i love baiacu")
+        
                     } completion: { _ in
                         UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
                            self.congratsPhraseThree.alpha = 0
                             self.congratsPhraseFour.alpha = 1
-                            print("i love baiacu")
+            
                         } completion: { _ in
                             UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
                                self.congratsPhraseFour.alpha = 0
                                 self.congratsPhraseFive.alpha = 1
-                                print("i love baiacu")
+                
                             } completion: { _ in
                                 UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
                                    self.congratsPhraseFive.alpha = 0
@@ -107,11 +107,11 @@ class ScoreViewController: UIViewController {
             congratsPhraseFive.image = UIImage(named: "Amazing")
         } else if scorePoints <= minimumScorePointsToLevel3 {
             congratsImage.image = UIImage(named: "Quest-Two-Bad-Ending")
-            congratsPhrase.image = UIImage(named: "Meh")
-            congratsPhraseTwo.image = UIImage(named: "Meh")
-            congratsPhraseThree.image = UIImage(named: "Meh")
-            congratsPhraseFour.image = UIImage(named: "Meh")
-            congratsPhraseFive.image = UIImage(named: "Meh")
+            congratsPhrase.image = UIImage(named: "disgusting")
+            congratsPhraseTwo.image = UIImage(named: "disgusting")
+            congratsPhraseThree.image = UIImage(named: "disgusting")
+            congratsPhraseFour.image = UIImage(named: "disgusting")
+            congratsPhraseFive.image = UIImage(named: "disgusting")
         } else if scorePoints >= minimumScorePointsToLevel4 && scorePoints <= minimumScorePointsToGoodEnding4 {
             congratsImage.image = UIImage(named: "Quest-Three-Good-Ending")
             congratsPhrase.image = UIImage(named: "Meh")
@@ -135,11 +135,11 @@ class ScoreViewController: UIViewController {
             congratsPhraseFive.image = UIImage(named: "Meh")
         } else if scorePoints <= minimumScorePointsToGoodEnding4 {
             congratsImage.image = UIImage(named: "Quest-Four-Bad-Ending")
-            congratsPhrase.image = UIImage(named: "Meh")
-            congratsPhraseTwo.image = UIImage(named: "Meh")
-            congratsPhraseThree.image = UIImage(named: "Meh")
-            congratsPhraseFour.image = UIImage(named: "Meh")
-            congratsPhraseFive.image = UIImage(named: "Meh")
+            congratsPhrase.image = UIImage(named: "pleasegoaway")
+            congratsPhraseTwo.image = UIImage(named: "pleasegoaway")
+            congratsPhraseThree.image = UIImage(named: "pleasegoaway")
+            congratsPhraseFour.image = UIImage(named: "pleasegoaway")
+            congratsPhraseFive.image = UIImage(named: "pleasegoaway")
         }
     }
     

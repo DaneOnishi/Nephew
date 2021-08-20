@@ -331,7 +331,7 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuestOne_GoodEnding" translatesAutoresizingMaskIntoConstraints="NO" id="EsK-Ju-YSK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quest-Four-Good-Ending" translatesAutoresizingMaskIntoConstraints="NO" id="EsK-Ju-YSK">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RAD" translatesAutoresizingMaskIntoConstraints="NO" id="EX7-et-L4m">
@@ -410,8 +410,8 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
         <image name="Floopy_3" width="190.5" height="194"/>
         <image name="Floopy_4" width="190.5" height="193.5"/>
         <image name="Main-Background" width="866" height="1868.5"/>
+        <image name="Quest-Four-Good-Ending" width="863" height="1867.5"/>
         <image name="Quest-Three-Card" width="863.5" height="1867"/>
-        <image name="QuestOne_GoodEnding" width="863" height="1867"/>
         <image name="RAD" width="863" height="105.5"/>
         <image name="Start-Button" width="425" height="118.5"/>
         <image name="Starting-Button" width="425" height="118.5"/>

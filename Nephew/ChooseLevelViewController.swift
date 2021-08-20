@@ -98,16 +98,14 @@ class ChooseLevelViewController: UIViewController {
             if floppyView.frame.intersects(computer.frame) {
                 UIView.animate(withDuration: 0.3) {
                     floppyView.alpha = 0.0
+                    SFXMusicSingleton.shared.soundPopPops()
                 } completion: { _ in
                     var level = Charges.EternalNephew
                     if self.pointsCounter >= 6{
-                        SFXMusicSingleton.shared.soundPopPops()
                         level = Charges.Junior
                     } else if self.pointsCounter >= 12 {
-                        SFXMusicSingleton.shared.soundPopPops()
                         level = Charges.Pleno
                     } else if self.pointsCounter >= 18 {
-                        SFXMusicSingleton.shared.soundPopPops()
                         level = Charges.Senior
                     }
                     self.presentQuiz(charges: level)
