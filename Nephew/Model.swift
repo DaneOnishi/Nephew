@@ -13,6 +13,7 @@ class ModelSingleton {
     private init() {}
     
     var pointsCounter = 0
+    var currentCharge: Charges?
     var questionNumber = Int()
     
     let questions = [
@@ -74,6 +75,12 @@ class ModelSingleton {
             ]
     ]
     
+    var unlockedCharges: [Charges: Bool] = [
+        .EternalNephew: true,
+        .Junior: false,
+        .Pleno: false,
+        .Senior: false]
+    
     func scoreSum() {
         pointsCounter += 1
     }
@@ -82,13 +89,23 @@ class ModelSingleton {
         case correct
         case incorrect
     }
+
+    func unlockCharges(charges: Charges) {
+        unlockedCharges[charges] = true
+    }
+    
+    func resetQuiz() {
+        pointsCounter = 0
+        currentCharge = nil 
+    }
 }
+
 
 class QuestGiven {
     internal init(questImage: String, text: String){
         self.questImage = questImage
         self.text = text
-   }
+    }
     var questImage: String
     var text: String
 }
@@ -98,6 +115,7 @@ enum Charges {
     case Pleno
     case Junior
     case EternalNephew
+    
     
     var questImage: String {
         switch self {
@@ -109,11 +127,86 @@ enum Charges {
             return "Quest-Three-Card"
         case .Senior:
             return "Quest-Four-Card"
-        default:
-            return "Quest-One-Card"
         }
-        
     }
     
+    var congratsImage: String {
+        switch self {
+        case .EternalNephew:
+            return "Quest-One-Good-Ending"
+        case .Junior:
+            return "Quest-Two-Good-Ending"
+        case .Pleno:
+            return "Quest-Three-Good-Ending"
+        case .Senior:
+            return "Quest-Four-Good-Ending"
+        }
+    }
+    
+    var defeatImage: String {
+        switch self {
+        case .EternalNephew:
+            return "Quest-One-Bad-Ending"
+        case .Junior:
+            return "Quest-Two-Bad-Ending"
+        case .Pleno:
+            return "Quest-Three-Bad-Ending"
+        case .Senior:
+            return "Quest-Four-Bad-Ending"
+        }
+    }
+    
+    var congratsPhrase: String {
+        switch self {
+        case .EternalNephew:
+            return "Amazing"
+        case .Junior:
+            return "RAD"
+        case .Pleno:
+            return "LIT"
+        case .Senior:
+            return "SOLID"
+        }
+    }
+    
+    var defeatPhrase: String {
+        switch self {
+        case .EternalNephew:
+            return "Meh"
+        case .Junior:
+            return "disgusting"
+        case .Pleno:
+            return "cringer"
+        case .Senior:
+            return "pleasegoaway"
+        }
+    }
+    
+    var minimumScoreToNextLevel: Int {
+        switch self {
+        case .EternalNephew:
+            return 6
+        case .Junior:
+            return 6
+        case .Pleno:
+            return 6
+        case .Senior:
+            return 6
+        }
+    }
+    
+    var nextCharge: Charges? {
+        switch self {
+        case .EternalNephew:
+            return .Junior
+        case .Junior:
+            return .Pleno
+        case .Pleno:
+            return .Senior
+        case .Senior:
+            return nil
+       
+        }
+    }
 }
 

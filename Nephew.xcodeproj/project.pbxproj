@@ -89,10 +89,10 @@
 				418E73FD26B07F4600F039BE /* Assets.xcassets */,
 				417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */,
 				417B5A0E26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 */,
-				418E73FF26B07F4600F039BE /* LaunchScreen.storyboard */,
-				418E740226B07F4600F039BE /* Info.plist */,
 				418E740826B083AE00F039BE /* Model.swift */,
 				419B560D26C6AE7700FDD67C /* SFXSingleton.swift */,
+				418E740226B07F4600F039BE /* Info.plist */,
+				418E73FF26B07F4600F039BE /* LaunchScreen.storyboard */,
 			);
 			path = Nephew;
 			sourceTree = "<group>";

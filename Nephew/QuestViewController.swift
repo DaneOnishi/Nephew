@@ -28,7 +28,6 @@ class QuestViewController: UIViewController {
         SFXMusicSingleton.shared.soundPopPops()
     }
     
-    
     func presentQuiz(level: Charges) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let quizVC = storyboard.instantiateViewController(identifier: "QuizViewController") as? QuizViewController else {

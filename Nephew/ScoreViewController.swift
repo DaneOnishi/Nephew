@@ -19,19 +19,20 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var congratsPhraseFour: UIImageView!
     @IBOutlet weak var congratsPhraseFive: UIImageView!
     var scorePoints = ModelSingleton.shared.pointsCounter
-    var minimumScorePointsToLevel2 = 6
-    var minimumScorePointsToLevel3 = 12
-    var minimumScorePointsToLevel4 = 18
-    var minimumScorePointsToGoodEnding4 = 24
-    var maxPoints = 30
+    let currentCharge = ModelSingleton.shared.currentCharge!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // put navigation to work and sees if its storing the points
         scoreLabel.text = ("\(ModelSingleton.shared.pointsCounter.description) Pontos")
         
+        if currentCharge.minimumScoreToNextLevel >= scorePoints,
+           let nextCharge = currentCharge.nextCharge {
+            ModelSingleton.shared.unlockCharges(charges: nextCharge)
+        }
+
         changeCongrats()
-        
         view.sendSubviewToBack(congratsImage)
     }
     
@@ -84,63 +85,23 @@ class ScoreViewController: UIViewController {
     }
     
     func changeCongrats() {
-        if scorePoints >= minimumScorePointsToLevel2 && scorePoints <= minimumScorePointsToLevel3  {
-            congratsImage.image = UIImage(named: "Quest-One-Good-Ending")
-            congratsPhrase.image = UIImage(named: "RAD")
-            congratsPhraseTwo.image = UIImage(named: "RAD")
-            congratsPhraseThree.image = UIImage(named: "RAD")
-            congratsPhraseFour.image = UIImage(named: "RAD")
-            congratsPhraseFive.image = UIImage(named: "RAD")
-        } else if scorePoints <= minimumScorePointsToLevel2 {
-            congratsImage.image = UIImage(named: "Quest-One-Bad-Ending")
-            congratsPhrase.image = UIImage(named: "Meh")
-            congratsPhraseTwo.image = UIImage(named: "Meh")
-            congratsPhraseThree.image = UIImage(named: "Meh")
-            congratsPhraseFour.image = UIImage(named: "Meh")
-            congratsPhraseFive.image = UIImage(named: "Meh")
-        } else if scorePoints >= minimumScorePointsToLevel3 && scorePoints <= minimumScorePointsToLevel4 {
-            congratsImage.image = UIImage(named: "Quest-Two-Good-Ending")
-            congratsPhrase.image = UIImage(named: "Amazing")
-            congratsPhraseTwo.image = UIImage(named: "Amazing")
-            congratsPhraseThree.image = UIImage(named: "Amazing")
-            congratsPhraseFour.image = UIImage(named: "Amazing")
-            congratsPhraseFive.image = UIImage(named: "Amazing")
-        } else if scorePoints <= minimumScorePointsToLevel3 {
-            congratsImage.image = UIImage(named: "Quest-Two-Bad-Ending")
-            congratsPhrase.image = UIImage(named: "disgusting")
-            congratsPhraseTwo.image = UIImage(named: "disgusting")
-            congratsPhraseThree.image = UIImage(named: "disgusting")
-            congratsPhraseFour.image = UIImage(named: "disgusting")
-            congratsPhraseFive.image = UIImage(named: "disgusting")
-        } else if scorePoints >= minimumScorePointsToLevel4 && scorePoints <= minimumScorePointsToGoodEnding4 {
-            congratsImage.image = UIImage(named: "Quest-Three-Good-Ending")
-            congratsPhrase.image = UIImage(named: "Meh")
-            congratsPhraseTwo.image = UIImage(named: "Meh")
-            congratsPhraseThree.image = UIImage(named: "Meh")
-            congratsPhraseFour.image = UIImage(named: "Meh")
-            congratsPhraseFive.image = UIImage(named: "Meh")
-        } else if scorePoints <= minimumScorePointsToLevel4  {
-            congratsImage.image = UIImage(named: "Quest-Three-Bad-Ending")
-            congratsPhrase.image = UIImage(named: "Meh")
-            congratsPhraseTwo.image = UIImage(named: "Meh")
-            congratsPhraseThree.image = UIImage(named: "Meh")
-            congratsPhraseFour.image = UIImage(named: "Meh")
-            congratsPhraseFive.image = UIImage(named: "Meh")
-        } else if scorePoints >= minimumScorePointsToGoodEnding4 && scorePoints <= maxPoints {
-            congratsImage.image = UIImage(named: "Quest-Four-Good-Ending")
-            congratsPhrase.image = UIImage(named: "Meh")
-            congratsPhraseTwo.image = UIImage(named: "Meh")
-            congratsPhraseThree.image = UIImage(named: "Meh")
-            congratsPhraseFour.image = UIImage(named: "Meh")
-            congratsPhraseFive.image = UIImage(named: "Meh")
-        } else if scorePoints <= minimumScorePointsToGoodEnding4 {
-            congratsImage.image = UIImage(named: "Quest-Four-Bad-Ending")
-            congratsPhrase.image = UIImage(named: "pleasegoaway")
-            congratsPhraseTwo.image = UIImage(named: "pleasegoaway")
-            congratsPhraseThree.image = UIImage(named: "pleasegoaway")
-            congratsPhraseFour.image = UIImage(named: "pleasegoaway")
-            congratsPhraseFive.image = UIImage(named: "pleasegoaway")
+        var congratsImageName = currentCharge.congratsImage
+        var congratsPhraseName = currentCharge.congratsPhrase
+        
+        if  scorePoints > currentCharge.minimumScoreToNextLevel {
+            congratsImageName = currentCharge.congratsImage
+            congratsPhraseName = currentCharge.congratsPhrase
+        } else if scorePoints < currentCharge.minimumScoreToNextLevel {
+            congratsImageName = currentCharge.defeatImage
+            congratsPhraseName = currentCharge.defeatPhrase
         }
+    
+            congratsImage.image = UIImage(named: congratsImageName)
+            congratsPhrase.image = UIImage(named: congratsPhraseName)
+            congratsPhraseTwo.image = UIImage(named: congratsPhraseName)
+            congratsPhraseThree.image = UIImage(named: congratsPhraseName)
+            congratsPhraseFour.image = UIImage(named: congratsPhraseName)
+            congratsPhraseFive.image = UIImage(named: congratsPhraseName)
     }
     
     
@@ -149,6 +110,7 @@ class ScoreViewController: UIViewController {
         guard let chooseLevelVC = storyboard.instantiateViewController(identifier: "ChooseLevelViewController") as? ChooseLevelViewController else { return }
         chooseLevelVC.modalPresentationStyle = .fullScreen
         self.present(chooseLevelVC, animated: true, completion: nil)
+        ModelSingleton.shared.resetQuiz()
     }
     
 }

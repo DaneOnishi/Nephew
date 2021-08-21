@@ -38,6 +38,4 @@ class MainMenuViewController: UIViewController {
         self.present(chooseLevelVC, animated: true, completion: nil)
         SFXMusicSingleton.shared.soundPopPops()
     }
-    
-    
 }

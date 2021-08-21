@@ -14,14 +14,13 @@ class ChooseLevelViewController: UIViewController {
     @IBOutlet weak var plenoFloppy: UIImageView!
     @IBOutlet weak var juniorFloppy: UIImageView!
     @IBOutlet weak var eternalNephewFloppy: UIImageView!
-    var questions = [Question]()
-    var pointsCounter = ModelSingleton.shared.pointsCounter
     @IBOutlet weak var chooseFreelaLabel: UILabel!
-    
-    
     @IBOutlet weak var computer: UIImageView!
     
     var floppyViewOrigin: CGPoint!
+    var unlockedCharges: [Charges: Bool] {
+        ModelSingleton.shared.unlockedCharges
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,17 +43,17 @@ class ChooseLevelViewController: UIViewController {
         plenoFloppy.alpha = 0.4
         seniorFloppy.alpha = 0.4
         
-        if pointsCounter >= 6 {
+        if unlockedCharges[.Junior]! {
             juniorFloppy.isUserInteractionEnabled = true
             juniorFloppy.alpha = 1
         }
         
-        if pointsCounter >= 12 {
+        if unlockedCharges[.Pleno]! {
             plenoFloppy.isUserInteractionEnabled = true
             plenoFloppy.alpha = 1
         }
         
-        if pointsCounter >= 18 {
+        if unlockedCharges[.Senior]! {
             seniorFloppy.isUserInteractionEnabled = true
             seniorFloppy.alpha = 1
         }
@@ -79,11 +78,6 @@ class ChooseLevelViewController: UIViewController {
         view.addGestureRecognizer(pan)
     }
     
-    func setup(questions: [Question]) {
-        self.questions = questions
-    }
-    
-    
     @objc func handlePan(sender: UIPanGestureRecognizer) {
         let floppyView = sender.view!
         let translation = sender.translation(in: view)
@@ -101,12 +95,12 @@ class ChooseLevelViewController: UIViewController {
                     SFXMusicSingleton.shared.soundPopPops()
                 } completion: { _ in
                     var level = Charges.EternalNephew
-                    if self.pointsCounter >= 6{
-                        level = Charges.Junior
-                    } else if self.pointsCounter >= 12 {
-                        level = Charges.Pleno
-                    } else if self.pointsCounter >= 18 {
-                        level = Charges.Senior
+                    if floppyView == self.juniorFloppy {
+                        level = .Junior
+                    } else if floppyView == self.plenoFloppy {
+                        level = .Pleno
+                    } else if floppyView == self.seniorFloppy {
+                        level = .Senior
                     }
                     self.presentQuiz(charges: level)
                 }
@@ -121,12 +115,14 @@ class ChooseLevelViewController: UIViewController {
     }
     
     func presentQuiz(charges: Charges) {
+      
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let questVC = storyboard.instantiateViewController(identifier: "QuestViewController") as? QuestViewController else {
             return
         }
         questVC.modalPresentationStyle = .fullScreen
         questVC.charges = charges
+        ModelSingleton.shared.currentCharge = charges
         self.present(questVC, animated: true, completion: nil)
     }
 }
