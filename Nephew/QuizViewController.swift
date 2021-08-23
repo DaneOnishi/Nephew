@@ -8,7 +8,6 @@
 import UIKit
 import AVFoundation
 
-
 struct Question {
     var questions: String
     var answers: [String]
@@ -28,7 +27,6 @@ class QuizViewController: UIViewController {
     var pointsCounter = ModelSingleton.shared.pointsCounter
     let generator = UINotificationFeedbackGenerator()
   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

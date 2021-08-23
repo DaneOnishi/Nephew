@@ -11,33 +11,30 @@ import AVFoundation
 class SFXMusicSingleton: NSObject, AVAudioPlayerDelegate {
     static let shared = SFXMusicSingleton()
     fileprivate var currentPlayer: AVAudioPlayer?
-   
+    
     
     private override init() { }
-
+    
     var players: [URL: AVAudioPlayer] = [:]
     var duplicatePlayers: [AVAudioPlayer] = []
-
+    
     func playSound(soundFileName: String) {
-
+        
         guard let bundle = Bundle.main.path(forResource: soundFileName, ofType: "mp3") else { return }
         let soundFileNameURL = URL(fileURLWithPath: bundle)
-
         if let player = players[soundFileNameURL] {
-
+            
             if !player.isPlaying {
                 player.prepareToPlay()
                 player.play()
             } else {
-
+                
                 do {
                     let duplicatePlayer = try AVAudioPlayer(contentsOf: soundFileNameURL)
-
-                    duplicatePlayer.delegate = self
-                   
-                    duplicatePlayers.append(duplicatePlayer)
                     
-
+                    duplicatePlayer.delegate = self
+                    
+                    duplicatePlayers.append(duplicatePlayer)
                     duplicatePlayer.prepareToPlay()
                     duplicatePlayer.play()
                 } catch let error {
@@ -54,8 +51,10 @@ class SFXMusicSingleton: NSObject, AVAudioPlayerDelegate {
                 print(error.localizedDescription)
             }
         }
+        currentPlayer?.numberOfLoops = 100
     }
-
+    
+    
     func playMainMusic() {
         playSound(soundFileName: "Luminare By HeatleyBros (Loop)")
     }

@@ -378,6 +378,7 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                             <constraint firstItem="EX7-et-L4m" firstAttribute="top" secondItem="jYj-ac-Tec" secondAttribute="top" constant="-30" id="jHN-E0-VrB"/>
                             <constraint firstItem="EX7-et-L4m" firstAttribute="leading" secondItem="jYj-ac-Tec" secondAttribute="leading" constant="20" id="lhe-kj-CWM"/>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="bottom" secondItem="3Dm-43-gBd" secondAttribute="bottom" constant="40" id="mRZ-BE-fpT"/>
+                            <constraint firstItem="YJC-Dd-vwn" firstAttribute="width" secondItem="jYj-ac-Tec" secondAttribute="width" multiplier="0.903382" id="quO-oJ-B2Z"/>
                             <constraint firstItem="EX7-et-L4m" firstAttribute="centerX" secondItem="jYj-ac-Tec" secondAttribute="centerX" id="r7z-5g-zox"/>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="trailing" secondItem="EsK-Ju-YSK" secondAttribute="trailing" id="rnU-8r-ckM"/>
                             <constraint firstItem="EX7-et-L4m" firstAttribute="top" secondItem="aQF-Xq-uTi" secondAttribute="bottom" constant="-150" id="tdL-vx-ZQV"/>

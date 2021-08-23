@@ -27,7 +27,7 @@ class ScoreViewController: UIViewController {
         // put navigation to work and sees if its storing the points
         scoreLabel.text = ("\(ModelSingleton.shared.pointsCounter.description) Pontos")
         
-        if currentCharge.minimumScoreToNextLevel >= scorePoints,
+        if scorePoints >= currentCharge.minimumScoreToNextLevel ,
            let nextCharge = currentCharge.nextCharge {
             ModelSingleton.shared.unlockCharges(charges: nextCharge)
         }
@@ -39,7 +39,7 @@ class ScoreViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseInOut) {
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseInOut) {
            self.scoreLabel.alpha = 0
         } completion: { _ in
             UIView.animate(withDuration: 0.3, delay: 0.05, options: .curveEaseInOut) {
