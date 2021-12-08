@@ -20,15 +20,15 @@ class ModelSingleton {
         Charges.EternalNephew:
             [
                 Question(questions: "hmmm abrir arquivo... onde que eu? ata abriu...\nQual configuração de cor devo usar para um post de feice?", answers: ["CMYK", "RGB", "Hexachrome", "Pantone"], correctAnswer: 1),
-                Question(questions: "O que é sangria?????? Devo colocar quanto?", answers: ["0.3mm", "0.5mm", "1.0cm", "Não coloca"], correctAnswer: 3),
-                Question(questions: "Como que diminui a fonte????????????? /nMeu brother disse que para web o melhor é usar fonte sem serifa \nO que isso significa?", answers: ["arial 12 vermelho fundo preto", "fonte com tracinho", "dificil de ler", "fonte sem traço ou barra como remate"], correctAnswer: 2),
-                Question(questions: "Vou pegar amarelo e azul, eu amo", answers: ["pegar amarelo e azul, eu amo", "utilizar uma paleta de cores análogas", "usar conta gotas em uma foto que voce pegou da internet", "tudo preto e branco, menos trabalho"], correctAnswer: 1),
-                Question(questions: "Hm, alguma coisa ta meio esquisita, tudo meio torto", answers: ["pegar uma régua e colocar na frente da tela", "gridar o workspace", "pedir opinião no grupo do zap", "vou deixar assim, é só impressão"], correctAnswer: 1),
-                Question(questions: "A tia não tem nenhuma foto legal do trico", answers: ["Pegar uma foto da net, ninguém vai descobri", "Ir no unsplash e pesquisar sanitary tricot", "Pedir uma foto pra tia e editar po", "faz sem foto mesmo"], correctAnswer: 2),
-                Question(questions: "Talvez eu seja acusado de plágio, parece que copiar outros posts não está dando certo", answers: ["A mano tá na net é pra pega", "Mudar uns detalhezinhos","tia não vai dar pra fazer", "Fazer uma coleta e análise de similares"], correctAnswer: 3),
-                Question(questions: "Se eu quiser passar uma vibe mais leve?", answers: ["Usar formas mais orgânicas, com arremates circulares", "Fazer três quadrados e já é","Tudo transparente", "Fotos de salada no fundo"], correctAnswer: 0),
-                Question(questions: "Tudo quase pronto, em que formato exportar?", answers: [".png, .jpeg", "Autocad",".mp3", "Exportar todos e mandar um zip pra tia"], correctAnswer: 0),
-                Question(questions: "Existe perigo de estragar meu trabalho mandando por", answers: ["Pasta compartilhada na nuvem", "Zap","Pen-drive", "Email"], correctAnswer: 3),
+                Question(questions: "O que é sangria??????", answers: ["Margem de segurança para corte na gráfica", "Bebida apreciada por designers", "Plugin para arte digital", "aiai uiui dodói"], correctAnswer: 0),
+                Question(questions: "Devo colocar quanto?", answers: ["0.3mm", "0.5mm", "1.0cm", "Não coloca"], correctAnswer: 3),
+                Question(questions: "O que é uma fonte com serifa?", answers: ["arial 12 vermelho fundo preto", "fonte com tracinho", "dificil de ler", "fonte sem traço ou barra como remate"], correctAnswer: 2),
+                Question(questions: "Método que posso utilizar para escolher cores?", answers: ["pegar amarelo e azul, eu amo", "utilizar uma paleta de cores análogas", "usar conta gotas em uma foto que voce pegou da internet", "tudo preto e branco, menos trabalho"], correctAnswer: 1),
+                Question(questions: "Como posso alinhar os elementos gráficos na tela?", answers: ["pegar uma régua e colocar na frente da tela", "gridar o workspace", "pedir opinião no grupo do zap", "vou deixar assim, é só impressão"], correctAnswer: 1),
+                Question(questions: "O que é visibilidade para Norman?", answers: ["Pegar uma foto da net, ninguém vai descobri", "Ir no unsplash e pesquisar sanitary tricot", "Existem elementos que ajudam no consumo e indicação do produto", "conseguir ver o produto"], correctAnswer: 2),
+                Question(questions: "O que é radiação para Leborg?", answers: ["Usar formas mais orgânicas, com arremates circulares", "Fazer três quadrados e já é","Estruturas repetitivas em torno de um centro", "TÓXICO"], correctAnswer: 2),
+                Question(questions: "E em que formato exportar?", answers: [".png, .jpeg", "Autocad",".mp3", "Exportar todos e mandar um zip pra tia"], correctAnswer: 0),
+                Question(questions: "Existe perigo de estragar meu trabalho mandando por", answers: ["Pasta compartilhada na nuvem", "Zap","Pen-drive", "Email"], correctAnswer: 3)
                 
             ],
         .Junior:
@@ -52,24 +52,24 @@ class ModelSingleton {
                 Question(questions: "De que forma posso representar o status do usuário no sistema?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
                 Question(questions: "As fotos de bolo não estão carregando na página", answers: ["Converter para um formato mais leve","Em breve","Em breve","Em breve"], correctAnswer: 3),
                 Question(questions: "Opinião sobre mudar a cor dos botões ao clicar", answers: ["Fornece feedback visual ao usuário","Confude demais","Tem função estética apenas","Pisca pisca pisca"], correctAnswer: 2),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 1),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3)
+                Question(questions: "Qual a importância de adicionar breadcrumbs na navegação do site?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 1),
+                Question(questions: "De que forma devo conversar com o mano dev?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "Caso queira fazer um site que funcione em diferentes tipos de tela, qual tipo de preocupação devo ter?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "Assets prontos como exportar para o mano dev?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "De que forma entregar para o cliento?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3)
             ],
         
         .Senior:
             [
-                Question(questions: "Se voce fosse rato", answers: ["cachorro", "rato", "passaro", "mamaco"], correctAnswer: 1),
+                Question(questions: "Chegando em uma nova equipe, o que fazer?", answers: ["cachorro", "rato", "passaro", "mamaco"], correctAnswer: 1),
+                Question(questions: "Pediram um projeto de ux research, o que é isso?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "De que forma devo prosseguir com o café?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
                 Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
-                Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "Na hora de gerenciar um projeto devo me preocupar com", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "Em caso de desentendimento de design devemos?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "O que deve ser priorizado em um projeto de UX?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "De que forma o trabalho em equipe pode ser otimizado?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "É possível administrar xx", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
                 Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
                 Question(questions: "Em breve", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3)
             ]
@@ -99,7 +99,6 @@ class ModelSingleton {
         currentCharge = nil 
     }
 }
-
 
 class QuestGiven {
     internal init(questImage: String, text: String){

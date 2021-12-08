@@ -65,7 +65,7 @@ class ChooseLevelViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.2, delay: 0, options: .repeat) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .repeat) {
             self.chooseFreelaLabel.alpha = 0
         } completion: { _ in
             self.chooseFreelaLabel.alpha = 1
@@ -115,7 +115,7 @@ class ChooseLevelViewController: UIViewController {
     }
     
     func presentQuiz(charges: Charges) {
-      
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let questVC = storyboard.instantiateViewController(identifier: "QuestViewController") as? QuestViewController else {
             return

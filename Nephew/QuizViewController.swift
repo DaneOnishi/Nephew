@@ -20,6 +20,7 @@ class QuizViewController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var questCard: UIImageView!
     @IBOutlet weak var startQuizButton: UIButton?
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var questions = [Question]()
     var questionNumber = Int()
@@ -35,6 +36,8 @@ class QuizViewController: UIViewController {
         } else {
             pickQuestion()
         }
+        
+        progressBar.progress = Float(pointsCounter)
     }
    
     func pickQuestion() {
