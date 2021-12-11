@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414C37DC27654568004CAC5C /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C37DB27654568004CAC5C /* EndingViewController.swift */; };
 		417B5A0D26CF047A00CFDE7B /* PopSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */; };
 		417B5A0F26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 417B5A0E26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 */; };
 		418E73F526B07F4400F039BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E73F426B07F4400F039BE /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		414C37DB27654568004CAC5C /* EndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
 		417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PopSound.mp3; sourceTree = "<group>"; };
 		417B5A0E26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Luminare By HeatleyBros (Loop).mp3"; sourceTree = "<group>"; };
 		418E73F126B07F4400F039BE /* Nephew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nephew.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,7 @@
 				41E6781F26B32A0D00F2180B /* QuestViewController.swift */,
 				418E740A26B0D42000F039BE /* QuizViewController.swift */,
 				418E741026B25C9F00F039BE /* ScoreViewController.swift */,
+				414C37DB27654568004CAC5C /* EndingViewController.swift */,
 				418E73FA26B07F4400F039BE /* Main.storyboard */,
 				418E73FD26B07F4600F039BE /* Assets.xcassets */,
 				417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */,
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				419B560E26C6AE7700FDD67C /* SFXSingleton.swift in Sources */,
+				414C37DC27654568004CAC5C /* EndingViewController.swift in Sources */,
 				418E73F926B07F4400F039BE /* ViewController.swift in Sources */,
 				418E740B26B0D42000F039BE /* QuizViewController.swift in Sources */,
 				418E740D26B1ED4300F039BE /* ChooseLevelViewController.swift in Sources */,

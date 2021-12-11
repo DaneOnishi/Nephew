@@ -215,26 +215,26 @@ enum Charges {
     var progressBarRightImage: String {
         switch self {
         case .EternalNephew:
-            return ""
+            return "Junior"
         case .Junior:
-            return ""
+            return "Pleno"
         case .Pleno:
-            return ""
+            return "Senior"
         case .Senior:
-            return ""
+            return "Star"
         }
     }
     
     var progressBarLeftImage: String {
         switch self {
         case .EternalNephew:
-            return ""
+            return "Eternal-Nephew"
         case .Junior:
-            return ""
+            return "Junior"
         case .Pleno:
-            return ""
+            return "Pleno"
         case .Senior:
-            return ""
+            return "Senior"
         }
     }
 }

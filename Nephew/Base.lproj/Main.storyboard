@@ -507,10 +507,10 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Ending View Controller-->
         <scene sceneID="jiQ-RA-7Bc">
             <objects>
-                <viewController id="lOP-mn-seY" sceneMemberID="viewController">
+                <viewController id="lOP-mn-seY" customClass="EndingViewController" customModule="Nephew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODo-8j-ETr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -545,6 +545,10 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                             <constraint firstItem="1Xc-Iz-Nry" firstAttribute="centerX" secondItem="Wgd-fm-UaF" secondAttribute="centerX" id="xxe-Gs-PSv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="1Xc-Iz-Nry" id="kBy-eo-SFn"/>
+                        <outlet property="textField" destination="Pc9-KE-gch" id="ZmK-Ng-zTE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngs-w0-w3w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -34,6 +34,10 @@ class ScoreViewController: UIViewController {
 
         changeCongrats()
         view.sendSubviewToBack(congratsImage)
+        
+        if scorePoints >= 24 {
+            presentEndingScene()
+        }
     }
     
     
@@ -111,6 +115,13 @@ class ScoreViewController: UIViewController {
         chooseLevelVC.modalPresentationStyle = .fullScreen
         self.present(chooseLevelVC, animated: true, completion: nil)
         ModelSingleton.shared.resetQuiz()
+    }
+    
+    func presentEndingScene() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let endingVC = storyboard.instantiateViewController(identifier: "EndingViewController") as? EndingViewController else { return }
+        endingVC.modalPresentationStyle = .fullScreen
+        self.present(endingVC, animated: true, completion: nil)
     }
     
 }
