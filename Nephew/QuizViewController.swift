@@ -21,6 +21,9 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var questCard: UIImageView!
     @IBOutlet weak var startQuizButton: UIButton?
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var rightImage: UIImageView!
+    @IBOutlet weak var leftImage: UIImageView!
+    var currentPhases: Charges = .EternalNephew
     
     var questions = [Question]()
     var questionNumber = Int()
@@ -31,14 +34,23 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let rightImageName = currentPhases.progressBarRightImage
+        var leftImageName = currentPhases.progressBarLeftImage
+        
+        
         if questions.count == 0 {
             presentScoreView()
         } else {
             pickQuestion()
         }
-        
         progressBar.progress = Float(pointsCounter)
+        
+        rightImage.image = UIImage(named: rightImageName)
+        leftImage.image = UIImage(named: leftImageName)
     }
+    
+    
+
    
     func pickQuestion() {
         if questions.count > 0 {

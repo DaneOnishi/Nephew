@@ -418,7 +418,9 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                     </view>
                     <connections>
                         <outlet property="labelText" destination="5Rr-4Z-A9C" id="KGH-6Z-e5e"/>
+                        <outlet property="leftImage" destination="eWL-2i-VPo" id="fj8-DJ-Ai0"/>
                         <outlet property="progressBar" destination="rAf-d9-XzR" id="WjT-Lb-ffW"/>
+                        <outlet property="rightImage" destination="gf4-Fq-PXD" id="dIH-Oa-660"/>
                         <outletCollection property="buttons" destination="5qb-l3-jJg" collectionClass="NSMutableArray" id="iSk-vS-m3B"/>
                         <outletCollection property="buttons" destination="8dE-YC-HpG" collectionClass="NSMutableArray" id="5VD-dB-Chg"/>
                         <outletCollection property="buttons" destination="s8w-aL-0rK" collectionClass="NSMutableArray" id="OFX-dL-YBA"/>
