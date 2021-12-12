@@ -113,7 +113,7 @@ class QuestGiven {
     var text: String
 }
 
-enum Charges {
+enum Charges: Int {
     case Senior
     case Pleno
     case Junior

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		414C37DC27654568004CAC5C /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C37DB27654568004CAC5C /* EndingViewController.swift */; };
+		414C37E12765BC20004CAC5C /* ScoresRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C37E02765BC20004CAC5C /* ScoresRepository.swift */; };
 		417B5A0D26CF047A00CFDE7B /* PopSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */; };
 		417B5A0F26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 417B5A0E26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 */; };
 		418E73F526B07F4400F039BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E73F426B07F4400F039BE /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		414C37DB27654568004CAC5C /* EndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
+		414C37E02765BC20004CAC5C /* ScoresRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresRepository.swift; sourceTree = "<group>"; };
 		417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PopSound.mp3; sourceTree = "<group>"; };
 		417B5A0E26CF048400CFDE7B /* Luminare By HeatleyBros (Loop).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Luminare By HeatleyBros (Loop).mp3"; sourceTree = "<group>"; };
 		418E73F126B07F4400F039BE /* Nephew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nephew.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		414C37DD2765BBCA004CAC5C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41E6782126B3447300F2180B /* CutSceneViewController.swift */,
+				414C37DB27654568004CAC5C /* EndingViewController.swift */,
+				418E741026B25C9F00F039BE /* ScoreViewController.swift */,
+				418E740A26B0D42000F039BE /* QuizViewController.swift */,
+				41E6781F26B32A0D00F2180B /* QuestViewController.swift */,
+				418E73F826B07F4400F039BE /* ViewController.swift */,
+				418E740C26B1ED4300F039BE /* ChooseLevelViewController.swift */,
+				418E740E26B23FD500F039BE /* MainMenuViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		414C37DE2765BBEE004CAC5C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				414C37E02765BC20004CAC5C /* ScoresRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		418E73E826B07F4400F039BE = {
 			isa = PBXGroup;
 			children = (
@@ -78,16 +103,10 @@
 		418E73F326B07F4400F039BE /* Nephew */ = {
 			isa = PBXGroup;
 			children = (
+				414C37DE2765BBEE004CAC5C /* Repositories */,
+				414C37DD2765BBCA004CAC5C /* ViewController */,
 				418E73F426B07F4400F039BE /* AppDelegate.swift */,
 				418E73F626B07F4400F039BE /* SceneDelegate.swift */,
-				418E73F826B07F4400F039BE /* ViewController.swift */,
-				41E6782126B3447300F2180B /* CutSceneViewController.swift */,
-				418E740E26B23FD500F039BE /* MainMenuViewController.swift */,
-				418E740C26B1ED4300F039BE /* ChooseLevelViewController.swift */,
-				41E6781F26B32A0D00F2180B /* QuestViewController.swift */,
-				418E740A26B0D42000F039BE /* QuizViewController.swift */,
-				418E741026B25C9F00F039BE /* ScoreViewController.swift */,
-				414C37DB27654568004CAC5C /* EndingViewController.swift */,
 				418E73FA26B07F4400F039BE /* Main.storyboard */,
 				418E73FD26B07F4600F039BE /* Assets.xcassets */,
 				417B5A0C26CF047A00CFDE7B /* PopSound.mp3 */,
@@ -172,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414C37E12765BC20004CAC5C /* ScoresRepository.swift in Sources */,
 				419B560E26C6AE7700FDD67C /* SFXSingleton.swift in Sources */,
 				414C37DC27654568004CAC5C /* EndingViewController.swift in Sources */,
 				418E73F926B07F4400F039BE /* ViewController.swift in Sources */,

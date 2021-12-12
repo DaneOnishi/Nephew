@@ -19,7 +19,8 @@ class ChooseLevelViewController: UIViewController {
     
     var floppyViewOrigin: CGPoint!
     var unlockedCharges: [Charges: Bool] {
-        ModelSingleton.shared.unlockedCharges
+        ScoresRepository.shared.GETTTTTTTTTTTTTTTTUnlockedChages()
+
     }
     
     override func viewDidLoad() {

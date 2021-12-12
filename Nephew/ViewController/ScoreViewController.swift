@@ -29,7 +29,7 @@ class ScoreViewController: UIViewController {
         
         if scorePoints >= currentCharge.minimumScoreToNextLevel ,
            let nextCharge = currentCharge.nextCharge {
-            ModelSingleton.shared.unlockCharges(charges: nextCharge)
+            ScoresRepository.shared.unlockCharge(charge: nextCharge)
         }
 
         changeCongrats()
