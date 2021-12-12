@@ -341,7 +341,7 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                                     <action selector="buttonTwo:" destination="JbH-aF-7lh" eventType="touchUpInside" id="8lM-yi-ZUF"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="rAf-d9-XzR">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rAf-d9-XzR">
                                 <rect key="frame" x="107" y="797" width="200" height="10"/>
                                 <color key="backgroundColor" red="0.97291606659999996" green="0.95927625890000001" blue="0.89709061379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.094117647060000004" green="0.086274509799999996" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

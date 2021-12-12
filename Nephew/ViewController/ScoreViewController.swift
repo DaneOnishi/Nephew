@@ -115,6 +115,8 @@ class ScoreViewController: UIViewController {
         chooseLevelVC.modalPresentationStyle = .fullScreen
         self.present(chooseLevelVC, animated: true, completion: nil)
         ModelSingleton.shared.resetQuiz()
+        ModelSingleton.shared.resetProgressBar()
+        
     }
     
     func presentEndingScene() {

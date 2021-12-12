@@ -15,6 +15,7 @@ class ModelSingleton {
     var pointsCounter = 0
     var currentCharge: Charges?
     var questionNumber = Int()
+    var progressBar = UIProgressView()
     
     let questions = [
         Charges.EternalNephew:
@@ -100,8 +101,9 @@ class ModelSingleton {
     }
     
     func resetProgressBar() {
-        
+     progressBar.progress = 0
     }
+    
 }
 
 class QuestGiven {

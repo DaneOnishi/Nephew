@@ -30,28 +30,30 @@ class QuizViewController: UIViewController {
     var correctAnswer = Int()
     var pointsCounter = ModelSingleton.shared.pointsCounter
     let generator = UINotificationFeedbackGenerator()
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let rightImageName = currentPhases.progressBarRightImage
-        var leftImageName = currentPhases.progressBarLeftImage
-        
+        let leftImageName = currentPhases.progressBarLeftImage
+        progressBar = ModelSingleton.shared.progressBar
+     
         
         if questions.count == 0 {
             presentScoreView()
         } else {
             pickQuestion()
         }
-        progressBar.progress = Float(pointsCounter)
+        // progressBar.progress = Float(pointsCounter)
         
         rightImage.image = UIImage(named: rightImageName)
         leftImage.image = UIImage(named: leftImageName)
+        
     }
     
     
-
-   
+    
+    
     func pickQuestion() {
         if questions.count > 0 {
             questionNumber = 0
@@ -72,11 +74,14 @@ class QuizViewController: UIViewController {
         self.questions = questions
     }
     
+    
+    
     @IBAction func buttonOne(_ sender: Any) {
         if correctAnswer == 0 {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
             generator.notificationOccurred(.success)
+            updateProgressView()
         } else {
             pickQuestion()
             generator.notificationOccurred(.error)
@@ -90,6 +95,7 @@ class QuizViewController: UIViewController {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
             generator.notificationOccurred(.success)
+            updateProgressView()
         } else {
             pickQuestion()
             generator.notificationOccurred(.error)
@@ -103,6 +109,7 @@ class QuizViewController: UIViewController {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
             generator.notificationOccurred(.success)
+            updateProgressView()
         } else {
             pickQuestion()
             generator.notificationOccurred(.error)
@@ -116,12 +123,18 @@ class QuizViewController: UIViewController {
             ModelSingleton.shared.scoreSum()
             pickQuestion()
             generator.notificationOccurred(.success)
+            updateProgressView()
         } else {
             pickQuestion()
             generator.notificationOccurred(.error)
         }
         
         SFXMusicSingleton.shared.soundPopPops()
+    }
+    
+    func updateProgressView(){
+        progressBar.progress += 0.1
+        progressBar.setProgress(progressBar.progress, animated: true)
     }
     
     
