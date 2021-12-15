@@ -22,13 +22,11 @@ class EndingViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.1,
                        delay: 1,options: .curveLinear) {
-            UIView.modifyAnimations(withRepeatCount: 6, autoreverses: true, animations: {
                 self.textField.alpha = 1
-            })
         } completion: { _ in
-            UIView.animate(withDuration: 0.1,
-                           delay: 1,
-                           options: .curveLinear) {
+            UIView.animate(withDuration: 0.5,
+                           delay: 3,
+                           options: .curveEaseInOut) {
                 self.textField.alpha = 0
                 
             }completion: { _ in

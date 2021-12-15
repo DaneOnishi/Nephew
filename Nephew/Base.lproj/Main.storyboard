@@ -455,7 +455,10 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                                 <rect key="frame" x="20" y="738.5" width="374" height="105.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dm-43-gBd">
-                                <rect key="frame" x="153" y="786" width="108.5" height="36"/>
+                                <rect key="frame" x="57" y="786" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="gca-tr-cUa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -472,7 +475,6 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                         <constraints>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="bottom" secondItem="E7l-R9-uuu" secondAttribute="bottom" constant="18" id="51d-kZ-HLh"/>
                             <constraint firstItem="EsK-Ju-YSK" firstAttribute="leading" secondItem="jYj-ac-Tec" secondAttribute="leading" id="9PR-HE-siQ"/>
-                            <constraint firstItem="3Dm-43-gBd" firstAttribute="width" secondItem="jYj-ac-Tec" secondAttribute="width" multiplier="0.262077" id="CDe-Gj-PRz"/>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="top" secondItem="EsK-Ju-YSK" secondAttribute="top" constant="44" id="FR5-Rq-Iyw"/>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="trailing" secondItem="Ql1-zh-yCx" secondAttribute="trailing" constant="20" id="OXj-il-KMC"/>
                             <constraint firstItem="E7l-R9-uuu" firstAttribute="leading" secondItem="jYj-ac-Tec" secondAttribute="leading" constant="20" id="Sak-pF-st1"/>

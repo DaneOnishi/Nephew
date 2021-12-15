@@ -70,7 +70,7 @@ class ModelSingleton {
                 Question(questions: "Como aproximar o usuário do design?", answers: ["Entrevistas","Testagens","Pesquisas Etnográficas","Todas"], correctAnswer: 3),
                 Question(questions: "O que deve ser priorizado em um projeto de UX?", answers: ["O cliente","A empresa","O usuário","Os grafismos"], correctAnswer: 2),
                 Question(questions: "O que é uma sprint", answers: ["Task a ser cumprida em X tempo","Refri","Tacada de golfe","Design de rótulo"], correctAnswer: 0),
-                Question(questions: "Qual destes não pertence ao processo de design thinking?", answers: ["Em breve","Em breve","Em breve","Em breve"], correctAnswer: 3),
+                Question(questions: "Qual destes não pertence ao processo de design thinking?", answers: ["Definir","Implementar","Simpatizar","Idealizar"], correctAnswer: 2),
                 Question(questions: "O que é churn?", answers: ["Perda de usuários","Comida com milho","Rodapé de site","Rescisão da equipe toda"], correctAnswer: 0),
                 Question(questions: "Qual é o segredo do design?", answers: ["Hate","Lollipop","Passion","Peace"], correctAnswer: 2)
             ]
