@@ -35,6 +35,7 @@ class QuestViewController: UIViewController {
         }
         quizVC.modalPresentationStyle = .fullScreen
         quizVC.setup(questions: ModelSingleton.shared.questions[level]!)
+        quizVC.currentPhases = level
         self.present(quizVC, animated: true, completion: nil)
     }
 }

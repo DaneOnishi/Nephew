@@ -32,11 +32,21 @@ class EndingViewController: UIViewController {
                 self.textField.alpha = 0
                 
             }completion: { _ in
-                UIView.animate(withDuration: 0.8,
+                UIView.animate(withDuration: 0.4,
                                delay: 2,
                                options: .curveEaseInOut) {
                     self.imageView.alpha = 1
-                    self.imageView.alpha = 0
+                } completion: { _ in
+                    UIView.animate(withDuration: 0.4,
+                                   delay: 2,
+                                   options: .curveEaseInOut) {
+                        self.imageView.alpha = 0
+                    } completion: { _ in
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        guard let mainMenuVC = storyboard.instantiateViewController(identifier: "MainMenuViewController") as? MainMenuViewController else { return }
+                        mainMenuVC.modalPresentationStyle = .fullScreen
+                        self.present(mainMenuVC, animated: true, completion: nil)
+                    }
                 } 
             }
         }

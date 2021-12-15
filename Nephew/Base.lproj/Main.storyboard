@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofc-Kn-ecv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofc-Kn-ecv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -461,19 +461,20 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RAD" translatesAutoresizingMaskIntoConstraints="NO" id="YJC-Dd-vwn">
-                                <rect key="frame" x="20" y="782.5" width="374" height="105.5"/>
+                                <rect key="frame" x="20" y="788.5" width="374" height="105.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="KXB-92-ol3"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jYj-ac-Tec"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="bottom" secondItem="E7l-R9-uuu" secondAttribute="bottom" constant="18" id="51d-kZ-HLh"/>
-                            <constraint firstItem="YJC-Dd-vwn" firstAttribute="leading" secondItem="jYj-ac-Tec" secondAttribute="leading" constant="20" id="7hg-fp-hAq"/>
                             <constraint firstItem="EsK-Ju-YSK" firstAttribute="leading" secondItem="jYj-ac-Tec" secondAttribute="leading" id="9PR-HE-siQ"/>
                             <constraint firstItem="3Dm-43-gBd" firstAttribute="width" secondItem="jYj-ac-Tec" secondAttribute="width" multiplier="0.262077" id="CDe-Gj-PRz"/>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="top" secondItem="EsK-Ju-YSK" secondAttribute="top" constant="44" id="FR5-Rq-Iyw"/>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="trailing" secondItem="Ql1-zh-yCx" secondAttribute="trailing" constant="20" id="OXj-il-KMC"/>
-                            <constraint firstItem="jYj-ac-Tec" firstAttribute="trailing" secondItem="YJC-Dd-vwn" secondAttribute="trailing" constant="20" id="QTk-An-NfP"/>
                             <constraint firstItem="E7l-R9-uuu" firstAttribute="leading" secondItem="jYj-ac-Tec" secondAttribute="leading" constant="20" id="Sak-pF-st1"/>
                             <constraint firstItem="3Dm-43-gBd" firstAttribute="centerX" secondItem="jYj-ac-Tec" secondAttribute="centerX" id="UUh-xG-aRD"/>
                             <constraint firstItem="aQF-Xq-uTi" firstAttribute="leading" secondItem="jYj-ac-Tec" secondAttribute="leading" constant="20" id="Uo4-Mm-0HH"/>
@@ -487,10 +488,11 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                             <constraint firstItem="EX7-et-L4m" firstAttribute="leading" secondItem="jYj-ac-Tec" secondAttribute="leading" constant="20" id="lhe-kj-CWM"/>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="bottom" secondItem="3Dm-43-gBd" secondAttribute="bottom" constant="40" id="mRZ-BE-fpT"/>
                             <constraint firstItem="EX7-et-L4m" firstAttribute="centerX" secondItem="jYj-ac-Tec" secondAttribute="centerX" id="r7z-5g-zox"/>
+                            <constraint firstItem="YJC-Dd-vwn" firstAttribute="centerX" secondItem="jYj-ac-Tec" secondAttribute="centerX" id="rMw-Ev-TU8"/>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="trailing" secondItem="EsK-Ju-YSK" secondAttribute="trailing" id="rnU-8r-ckM"/>
                             <constraint firstItem="EX7-et-L4m" firstAttribute="top" secondItem="aQF-Xq-uTi" secondAttribute="bottom" constant="-150" id="tdL-vx-ZQV"/>
                             <constraint firstItem="jYj-ac-Tec" firstAttribute="trailing" secondItem="EX7-et-L4m" secondAttribute="trailing" constant="20" id="xz1-CT-Qve"/>
-                            <constraint firstItem="YJC-Dd-vwn" firstAttribute="bottom" secondItem="jYj-ac-Tec" secondAttribute="bottom" constant="26" id="ynE-Tb-gZL"/>
+                            <constraint firstItem="YJC-Dd-vwn" firstAttribute="bottom" secondItem="jYj-ac-Tec" secondAttribute="bottom" constant="32" id="ynE-Tb-gZL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -507,10 +509,10 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="87.723214285714278"/>
         </scene>
-        <!--Ending View Controller-->
+        <!--EndingViewController-->
         <scene sceneID="jiQ-RA-7Bc">
             <objects>
-                <viewController id="lOP-mn-seY" customClass="EndingViewController" customModule="Nephew" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndingViewController" title="EndingViewController" id="lOP-mn-seY" customClass="EndingViewController" customModule="Nephew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODo-8j-ETr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -528,7 +530,7 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Xc-Iz-Nry">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RIP" translatesAutoresizingMaskIntoConstraints="NO" id="1Xc-Iz-Nry">
                                 <rect key="frame" x="87" y="341" width="240" height="224"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="224" id="Unk-S6-GOQ"/>
@@ -569,6 +571,7 @@ Escolha com cuidado e       PRESTE ATENÇÃO no briefing</string>
         <image name="Quest-Four-Good-Ending" width="863" height="1867.5"/>
         <image name="Quest-Three-Card" width="863.5" height="1867"/>
         <image name="RAD" width="863" height="105.5"/>
+        <image name="RIP" width="128.5" height="205"/>
         <image name="Start-Button" width="425" height="118.5"/>
         <image name="Starting-Button" width="425" height="118.5"/>
         <systemColor name="systemBackgroundColor">

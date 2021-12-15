@@ -100,9 +100,6 @@ class ModelSingleton {
         currentCharge = nil 
     }
     
-    func resetProgressBar() {
-     progressBar.progress = 0
-    }
 }
 
 class QuestGiven {
