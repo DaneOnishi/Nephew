@@ -51,9 +51,6 @@ class QuizViewController: UIViewController {
         
     }
     
-    
-    
-    
     func pickQuestion() {
         if questions.count > 0 {
             questionNumber = 0
